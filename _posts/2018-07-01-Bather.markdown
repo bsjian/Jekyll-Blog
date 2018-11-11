@@ -1,0 +1,41 @@
+---
+title: ":cloud: Bather: Chrome Weather Forecast Plug-in"
+layout: post
+date: 2018-07-01 19:04
+tag: 
+    - Chrome Extension 
+    - Weather Forecast 
+headerImage: true
+projects: true
+hidden: true # don't count this post in blog pagination
+description: A weather forecast Chrome Extension
+category: project
+author: boshengjian
+externalLink: false
+---
+
+![Screenshot](/assets/images/projects/bather/atlanta.png)
+
+Bather is a weather forecast Chrome Extension, who gets weather information from OpenWeatherMap's API.  
+
+[Check it out](https://chrome.google.com/webstore/detail/bather/ldbpocnepgdgpipohgbfimmniinkdmcb) here. 
+
+
+---
+
+- You Can Search your Location
+    ![Screenshot](/assets/images/projects/bather/change_location.png)
+
+    ![Screenshot](/assets/images/projects/bather/search.png)
+
+
+
+
+---
+
+
+<p align="center">
+  <img />
+</p>
+
+
