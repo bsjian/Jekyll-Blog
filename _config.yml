@@ -103,9 +103,6 @@ show-author: true
 # do you want some animations?
 animation: true
 
-encoding: utf-8
-
-
 plugins:
   - jekyll-seo-tag
   - jekyll-gist

@@ -4,5 +4,4 @@ gem 'github-pages'
 gem 'html-proofer'
 gem 'jekyll-admin'
 gem 'jekyll-twitter-plugin'
-gem 'rake'
 
