@@ -18,7 +18,7 @@ resume: true
 resume-external: true
 resume-url: https://drive.google.com/file/d/1qpCRQUL1wuly1vhabSdTcSDDBz7CY7Ff/view?usp=sharing
 
-url: https://bsjian.github.io/Jekyll-Blog/
+url: https://bsjian.github.io/Jekyll-Blog
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
