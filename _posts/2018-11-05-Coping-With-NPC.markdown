@@ -1,5 +1,5 @@
 ---
-title: "Coping With NP-Completeness"
+title: "Coping With NP-Completeness - Branch-and-Bound"
 layout: post
 date: 2018-11-05 10:00
 image: /assets/images/markdown.jpg
@@ -17,24 +17,19 @@ description: Coping with NP-Completeness
 
 ## Summary:
 
-There are ways to cope with NP-Complete problems: 
-- [Branch-and-Bound](#branch-and-bound)
-  + [Pseudo-Code](#pseudo-code)
-  + [Travelling-Salesman-Problem](#travelling-salesman-problem)
-    * [TSP-Bounding](#tsp-bounding)
-      - [Naive-Bounding](#naive-bound)
-      - [Reduced-Cost-Matrix](#reduced-cost-matrix)
-      - [Dynamic-MST-Bounding](#dynamic-mst-bounding)
-    * [TSP-Branching](#tsp-branching)
-- Parameterized algorithms
-- Approximation
-- Local search
-- Restriction
-- Randomization
+This post will introduce branch and bound method. 
+- [Introduction](#introduction)
+- [Pseudo-Code](#pseudo-code)
+- [Travelling-Salesman-Problem](#travelling-salesman-problem)
+   * [TSP-Bounding](#tsp-bounding)
+   * [Naive-Bounding](#naive-bound)
+   * [Reduced-Cost-Matrix](#reduced-cost-matrix)
+   * [Dynamic-MST-Bounding](#dynamic-mst-bounding)
+- [TSP-Branching](#tsp-branching)
 
 ---
 
-## Branch and Bound
+## Introduction
 
 Branch and Bound method is an enhancement of [Backtracking](http://www.boshengjian.com/General-Solution-to-Backtracking-Questions/#formula)
 

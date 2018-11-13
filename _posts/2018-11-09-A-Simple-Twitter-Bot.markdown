@@ -13,7 +13,7 @@ author: boshengjian
 externalLink: false
 ---
 
-I just created a very simple twitter bot based Tweepy. 
+I just created a very simple twitter bot based on Tweepy. 
 
 When you @BBosheng with hash tag #helloworld, the bot will reply you immediately!
 
