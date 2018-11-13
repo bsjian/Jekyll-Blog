@@ -66,8 +66,8 @@ of a solution,
 
 ### Several Concepts
 
-**Promising** A node in a state-space tree is said to be promising if it corresponds to a partially constructed solution that may still lead to a complete solution.
-**Non-promising** If the node will not lead to a solution.
+**Promising:** A node in a state-space tree is said to be promising if it corresponds to a partially constructed solution that may still lead to a complete solution.
+**Non-promising:** If the node will not lead to a solution.
 
 So leaves represent either non-promising dead ends or complete solutions found by the algorithm.
 

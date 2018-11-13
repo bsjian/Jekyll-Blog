@@ -44,10 +44,11 @@ Use the dataset provided in [heatmap.csv](https://gist.github.com/bsjian/2ddc2c9
 
 Use the dataset provided to create an interactive bar chart. Each line in the file represents population growth (per year) of an US city over the past five years, starting with total population of year 2012.
 
-Create a horizontal bar chart with its vertical axis denoting the city names (ordered  by population) and its horizontal axis denoting the total cumulative population (with “,” as the thousand separator) at the end of 2017. Each bar should have its associated total population shown on top of it. Refer to the example shown in Figure 5a.
+Create a horizontal bar chart with its vertical axis denoting the city names (ordered  by population) and its horizontal axis denoting the total cumulative population (with “,” as the thousand separator) at the end of 2017. Each bar should have its associated total population shown on top of it.
 
-When hovering the mouse over a bar, a smaller line chart representing the population growth of that city for each year (2013-2017) should be displayed in the top right corner. For example, Los Angeles has a growth value of 0.84%, 0.79%, 0.78%, 0.70%, 0.47% for the years 2013, 2014, 2015, 2016 and 2017 respectively. On hovering over the bar representing Los Angeles, a line chart depicting these 5 values in % is displayed. See Figure 5b for an example.
+When hovering the mouse over a bar, a smaller line chart representing the population growth of that city for each year (2013-2017) should be displayed in the top right corner. For example, Los Angeles has a growth value of 0.84%, 0.79%, 0.78%, 0.70%, 0.47% for the years 2013, 2014, 2015, 2016 and 2017 respectively. On hovering over the bar representing Los Angeles, a line chart depicting these 5 values in % is displayed.
 
+![Screenshot](/assets/images/projects/d3_warm_up/interactive.png)
 
 <p data-height="650" data-theme-id="light" data-slug-hash="eQNVOa" data-default-tab="result" data-user="bsjian" data-pen-title="CSE6242 HW2 Q5" class="codepen">See the Pen <a href="https://codepen.io/bsjian/pen/eQNVOa/">CSE6242 HW2 Q5</a> by Bosheng Jian (<a href="https://codepen.io/bsjian">@bsjian</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>

@@ -1,5 +1,5 @@
 ---
-title: "Coping With NP-Completeness - Branch-and-Bound"
+title: "Coping With NP-Completeness - Branch and Bound"
 layout: post
 date: 2018-11-05 10:00
 image: /assets/images/markdown.jpg
@@ -111,5 +111,3 @@ Consider Reduced Cost Matrix, if we take the edge (4,6), Lower Bound won't chang
 
 Then, again reduce the current matrix by one row and one column to get the current Lower Bound. Set the cost (6,4) to infinity (so that we 're not going back to 4).
 
-
-## Still In Editing, Sorry!
