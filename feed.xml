@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://bsjian.github.io/Jekyll-Blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bsjian.github.io/Jekyll-Blog/" rel="alternate" type="text/html" /><updated>2018-11-11T21:47:42-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/</id><title type="html">Bosheng Jian</title><subtitle>My blog where I upload boring stuff</subtitle><entry><title type="html">A Simple Twitter Bot</title><link href="https://bsjian.github.io/Jekyll-Blog/A-Simple-Twitter-Bot/" rel="alternate" type="text/html" title="A Simple Twitter Bot" /><published>2018-11-09T23:03:00-05:00</published><updated>2018-11-09T23:03:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/A-Simple-Twitter-Bot</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/A-Simple-Twitter-Bot/">&lt;p&gt;I just created a very simple twitter bot based Tweepy.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://bsjian.github.io/Jekyll-Blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bsjian.github.io/Jekyll-Blog/" rel="alternate" type="text/html" /><updated>2018-11-13T01:44:10-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/</id><title type="html">Bosheng Jian</title><subtitle>My blog where I upload boring stuff</subtitle><entry><title type="html">A Simple Twitter Bot</title><link href="https://bsjian.github.io/Jekyll-Blog/A-Simple-Twitter-Bot/" rel="alternate" type="text/html" title="A Simple Twitter Bot" /><published>2018-11-09T23:03:00-05:00</published><updated>2018-11-09T23:03:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/A-Simple-Twitter-Bot</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/A-Simple-Twitter-Bot/">&lt;p&gt;I just created a very simple twitter bot based on Tweepy.&lt;/p&gt;
 
 &lt;p&gt;When you @BBosheng with hash tag #helloworld, the bot will reply you immediately!&lt;/p&gt;
 
@@ -300,37 +300,26 @@
 
 &lt;p&gt;There are tons of tutorials online, check this out:&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;310&quot; src=&quot;https://www.youtube.com/embed/W0wWwglE1Vc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>boshengjian</name></author><category term="project" /><category term="Python" /><summary type="html">I just created a very simple twitter bot based Tweepy.</summary></entry><entry><title type="html">Coping With NP-Completeness</title><link href="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC/" rel="alternate" type="text/html" title="Coping With NP-Completeness" /><published>2018-11-05T10:00:00-05:00</published><updated>2018-11-05T10:00:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;310&quot; src=&quot;https://www.youtube.com/embed/W0wWwglE1Vc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>boshengjian</name></author><category term="project" /><category term="Python" /><summary type="html">I just created a very simple twitter bot based on Tweepy.</summary></entry><entry><title type="html">Coping With NP-Completeness - Branch-and-Bound</title><link href="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC/" rel="alternate" type="text/html" title="Coping With NP-Completeness - Branch-and-Bound" /><published>2018-11-05T10:00:00-05:00</published><updated>2018-11-05T10:00:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
 
-&lt;p&gt;There are ways to cope with NP-Complete problems:&lt;/p&gt;
+&lt;p&gt;This post will introduce branch and bound method.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#branch-and-bound&quot;&gt;Branch-and-Bound&lt;/a&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pseudo-code&quot;&gt;Pseudo-Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#travelling-salesman-problem&quot;&gt;Travelling-Salesman-Problem&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#pseudo-code&quot;&gt;Pseudo-Code&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#travelling-salesman-problem&quot;&gt;Travelling-Salesman-Problem&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#tsp-bounding&quot;&gt;TSP-Bounding&lt;/a&gt;
-            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#naive-bound&quot;&gt;Naive-Bounding&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#reduced-cost-matrix&quot;&gt;Reduced-Cost-Matrix&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#dynamic-mst-bounding&quot;&gt;Dynamic-MST-Bounding&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#tsp-branching&quot;&gt;TSP-Branching&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#tsp-bounding&quot;&gt;TSP-Bounding&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#naive-bound&quot;&gt;Naive-Bounding&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#reduced-cost-matrix&quot;&gt;Reduced-Cost-Matrix&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#dynamic-mst-bounding&quot;&gt;Dynamic-MST-Bounding&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Parameterized algorithms&lt;/li&gt;
-  &lt;li&gt;Approximation&lt;/li&gt;
-  &lt;li&gt;Local search&lt;/li&gt;
-  &lt;li&gt;Restriction&lt;/li&gt;
-  &lt;li&gt;Randomization&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tsp-branching&quot;&gt;TSP-Branching&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;branch-and-bound&quot;&gt;Branch and Bound&lt;/h2&gt;
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Branch and Bound method is an enhancement of &lt;a href=&quot;http://www.boshengjian.com/General-Solution-to-Backtracking-Questions/#formula&quot;&gt;Backtracking&lt;/a&gt;&lt;/p&gt;
 
@@ -1194,7 +1183,35 @@ Output:
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isPalindrome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// check if s.subString(low, high) is a Palindrome&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>boshengjian</name></author><category term="blog" /><category term="leetcode" /><category term="problems" /><category term="Java" /><summary type="html">Summary:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://bsjian.github.io/Jekyll-Blog/assets/images/markdown.jpg" /></entry><entry><title type="html">:cloud: Bather: Chrome Weather Forecast Plug-in</title><link href="https://bsjian.github.io/Jekyll-Blog/Bather/" rel="alternate" type="text/html" title=":cloud: Bather: Chrome Weather Forecast Plug-in" /><published>2018-07-01T19:04:00-04:00</published><updated>2018-07-01T19:04:00-04:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Bather</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Bather/">&lt;p&gt;&lt;img src=&quot;/assets/images/projects/bather/atlanta.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>boshengjian</name></author><category term="blog" /><category term="leetcode" /><category term="problems" /><category term="Java" /><summary type="html">Summary:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://bsjian.github.io/Jekyll-Blog/assets/images/markdown.jpg" /></entry><entry><title type="html">:camera: Full Stack Gallery Website, Cloudinary and Nodemailer</title><link href="https://bsjian.github.io/Jekyll-Blog/Photo-Gallery/" rel="alternate" type="text/html" title=":camera: Full Stack Gallery Website, Cloudinary and Nodemailer" /><published>2018-07-28T16:23:00-04:00</published><updated>2018-07-28T16:23:00-04:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Photo-Gallery</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Photo-Gallery/">&lt;p&gt;Bosheng’s Photo Gallery is my personal Gallery enbaled built with MongoDB, Express.js and Node.js.
+&lt;a href=&quot;https://afternoon-citadel-68589.herokuapp.com/&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;welcoming-page&quot;&gt;Welcoming Page&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/projects/gallery/welcome.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sign-up-log-in&quot;&gt;Sign Up/ Log In&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/projects/gallery/register.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/projects/gallery/login.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;googlemaps-api&quot;&gt;GoogleMaps API&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/projects/gallery/map.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cloudinary&quot;&gt;Cloudinary&lt;/h2&gt;
+
+&lt;p&gt;All photos are stored in Cloudinary&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/projects/gallery/cloud.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can add/edit your comments
+    &lt;img src=&quot;/assets/images/projects/gallery/camp_datail.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>boshengjian</name></author><category term="project" /><category term="website" /><category term="full stack" /><category term="MangoDB" /><category term="Express.js" /><category term="Node.js" /><category term="Cloudinary" /><summary type="html">Bosheng’s Photo Gallery is my personal Gallery enbaled built with MongoDB, Express.js and Node.js. Check it out here.</summary></entry><entry><title type="html">:cloud: Bather: Chrome Weather Forecast Plug-in</title><link href="https://bsjian.github.io/Jekyll-Blog/Bather/" rel="alternate" type="text/html" title=":cloud: Bather: Chrome Weather Forecast Plug-in" /><published>2018-07-01T19:04:00-04:00</published><updated>2018-07-01T19:04:00-04:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Bather</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Bather/">&lt;p&gt;&lt;img src=&quot;/assets/images/projects/bather/atlanta.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bather is a weather forecast Chrome Extension, who gets weather information from OpenWeatherMap’s API.&lt;/p&gt;
 
