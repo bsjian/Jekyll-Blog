@@ -17,9 +17,10 @@ I just created a very simple twitter bot based on Tweepy.
 
 When you @BBosheng with hash tag #helloworld, the bot will reply you immediately!
 
-{% twitter https://twitter.com/missakakuma/status/1061448080552312832 %}
 
-{% twitter https://twitter.com/BBosheng/status/1061448088202678272 %}
+{% twitter https://twitter.com/jianbosheng/status/1069705784127299590 %}
+
+{% twitter https://twitter.com/BBosheng/status/1069706170519183360 %}
 
 ---
 
