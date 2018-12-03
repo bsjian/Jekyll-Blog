@@ -1,4 +1,186 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://bsjian.github.io/Jekyll-Blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bsjian.github.io/Jekyll-Blog/" rel="alternate" type="text/html" /><updated>2018-11-13T16:13:34-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/</id><title type="html">Bosheng Jian</title><subtitle>My blog where I upload boring stuff</subtitle><entry><title type="html">Coping With NP-Completeness - Local Search</title><link href="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search/" rel="alternate" type="text/html" title="Coping With NP-Completeness - Local Search" /><published>2018-11-13T12:00:00-05:00</published><updated>2018-11-13T12:00:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://bsjian.github.io/Jekyll-Blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bsjian.github.io/Jekyll-Blog/" rel="alternate" type="text/html" /><updated>2018-12-03T16:54:42-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/</id><title type="html">Bosheng Jian</title><subtitle>My blog where I upload boring stuff</subtitle><entry><title type="html">Empirical Analysis of Algorithms</title><link href="https://bsjian.github.io/Jekyll-Blog/Empirical-Analysis-of-Algorithms/" rel="alternate" type="text/html" title="Empirical Analysis of Algorithms" /><published>2018-11-15T12:00:00-05:00</published><updated>2018-11-15T12:00:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Empirical-Analysis-of-Algorithms</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Empirical-Analysis-of-Algorithms/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
+
+&lt;p&gt;This post will introduce branch and bound method.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#search-process&quot;&gt;Search-Process&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#several-concepts&quot;&gt;Several-Concepts&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#tsp&quot;&gt;TSP&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#hill-climbing&quot;&gt;Hill-Climbing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stochastic-local-search&quot;&gt;Stochastic-Local-Search&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#random-restart-hill-climbing&quot;&gt;Random-restart-hill-climbing&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-walksat-algorithm&quot;&gt;The-WalkSAT-Algorithm&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#hill-climbing&quot;&gt;Simulated-Annealing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;NP-Complete problems are very difficult and naive algorithms is typically of exponential run time complexity, which is very bad when the input is large.&lt;/p&gt;
+
+&lt;p&gt;For Combinatorial Optimization Problems (such as TSP, 0-1 Knapsack, Assignment problem, Bin packing problem, SAT, Eight queens puzzle, etc.), local search can quickly find a solution for which you cannot give any quality guarantee (but which might often be good in practice on real problem instances)&lt;/p&gt;
+
+&lt;h3 id=&quot;search-process&quot;&gt;Search Process&lt;/h3&gt;
+
+&lt;p&gt;Local Search can be generalized as:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;start from initial position&lt;/li&gt;
+  &lt;li&gt;iteratively move from current position to one of neighboring
+positions&lt;/li&gt;
+  &lt;li&gt;use evaluation function to choose among neighboring positions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/local_search_metaphor.png&quot; alt=&quot;LocalSearch&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;several-concepts&quot;&gt;Several Concepts&lt;/h3&gt;
+
+&lt;p&gt;Take SAT and TSP as examples, local search would be:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Search Space S:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;SAT: set of all complete truth assignments to propositional variables (all “potential solutions”)&lt;/li&gt;
+      &lt;li&gt;TSP: set of all permutations of vertices (all “potential
+solutions”)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Solution Set S’⊆S:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;SAT: all satisfying assignments for given formula&lt;/li&gt;
+      &lt;li&gt;TSP: the tours of minimum length&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Neighborhood Relation N(S)∈S :&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;A way to move from one potential solution to another&lt;/li&gt;
+      &lt;li&gt;SAT: neighboring variable assignments differ in the truth&lt;/li&gt;
+      &lt;li&gt;TSP: neighboring tour differ in several edges&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Evaluation Function g:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;SAT: number of clauses satisfied under given assignment&lt;/li&gt;
+      &lt;li&gt;TSP: length of tour&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tsp&quot;&gt;TSP&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/tsp_neighboring.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Search Space: all permutations of the cities (each defines a cycle)
+3-opt – delete 3 edges and reconnect fragments into 1 cycle
+k-opt – delete k edges and reconnect fragments into 1 cycle&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;hill-climbing&quot;&gt;Hill Climbing&lt;/h2&gt;
+
+&lt;p&gt;Hill Climbing is basically choosing the neighbor with the largest improvement as the next state until a local optimal solution is reached. It’s very fast and works well for certain problems.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/hill_climbing.png&quot; alt=&quot;Screenshot&quot; /&gt;
+&lt;img src=&quot;/assets/images/blogs/coping/hill_climbing_algo.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, this local search only finds the local optimization, which is not guaranteed to be the overall optimal solution, as there might be multiple hills. And it is prone to be misguided by evaluation/objective function.&lt;/p&gt;
+
+&lt;h2 id=&quot;stochastic-local-search&quot;&gt;Stochastic Local Search&lt;/h2&gt;
+
+&lt;p&gt;Hill Climbing is a Greedy Algorithm which search a local optimization.&lt;/p&gt;
+
+&lt;p&gt;Compared to Hill Climbing, Stochastic Local Search is that when we make our decisions, instead of choosing the neighbor with the largest improvement as the next state (go up), we not only randomize initialization step but also choose the next state &lt;strong&gt;randomly&lt;/strong&gt; such that suboptimal/worsening steps are
+allowed.&lt;/p&gt;
+
+&lt;p&gt;Simple SLS methods include :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Random Search (Blind Guessing): In each step, randomly select one element of the search space.&lt;/li&gt;
+  &lt;li&gt;(Uninformed) RandomWalk: In each step, randomly select one of the neighboring positions of the search space and move there.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;random-restart-hill-climbing&quot;&gt;Random restart hill climbing&lt;/h3&gt;
+
+&lt;p&gt;Steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Start at random solution&lt;/li&gt;
+  &lt;li&gt;Hill-climb until local optima&lt;/li&gt;
+  &lt;li&gt;Start at another random position&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/random_hill_climbing.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-walksat-algorithm&quot;&gt;The WalkSAT Algorithm&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;WalkSAT(CNF, max-tries, max-flips, p) {
+    for i ← 1 to max-tries do
+        solution = random truth assignment
+        for j ← 1 to max-flips do
+            if all clauses in CNF satisfied then
+                return solution
+            c ← random unsatisfied clause in CNF with probability p
+                flip a random variable in c
+            else
+                flip variable in c that maximizes number of satisfied clauses
+return failure
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;simulated-annealing&quot;&gt;Simulated Annealing&lt;/h2&gt;
+
+&lt;h3 id=&quot;sa-analogy&quot;&gt;SA Analogy&lt;/h3&gt;
+
+&lt;p&gt;Annealing is process of heating and cooling metals in order to
+improve strength&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Idea: Controlled heating and cooling of metal&lt;/li&gt;
+  &lt;li&gt;When hot, atoms move around&lt;/li&gt;
+  &lt;li&gt;When cooled, atoms find configuration with lower internal energy (i.e.
+makes metal stronger)
+Analogy:&lt;/li&gt;
+  &lt;li&gt;Temperature = probability of accepting worse neighboring solution&lt;/li&gt;
+  &lt;li&gt;When temperature is high, likely to accept worse neighboring solutions
+(but may lead to better overall solution)&lt;/li&gt;
+  &lt;li&gt;Analogous to atoms wandering around&lt;/li&gt;
+  &lt;li&gt;Cooling represents shrinking probability of accepting worse solutions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sa-pseudo-code&quot;&gt;SA Pseudo code&lt;/h3&gt;
+
+&lt;p&gt;Select a neighbor at random.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If better than current state, go there (improving move).&lt;/li&gt;
+  &lt;li&gt;Otherwise, go there with some probability (worsening move).&lt;/li&gt;
+  &lt;li&gt;Probability goes down with time (similar to temperature cooling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/sa_algo.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Acceptance criterion (Metropolis condition): choose new solution s’ over old solution s with probability (maximization)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/sa_formula.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Initial temperature T0&lt;/li&gt;
+  &lt;li&gt;Annealing (cooling) schedule: how to update the
+temperature&lt;/li&gt;
+  &lt;li&gt;E.g. T = a T with a =0.95 (geometric schedule)&lt;/li&gt;
+  &lt;li&gt;Number of iterations at each temperature (e.g. multiple of the
+neighbourhood size)&lt;/li&gt;
+  &lt;li&gt;Stopping criterion&lt;/li&gt;
+  &lt;li&gt;E.g. no improved solution found for a number of iterations (or
+number of temperature values)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>boshengjian</name></author><category term="blog" /><category term="NP-Complete" /><category term="algorithms" /><category term="proof" /><category term="problems" /><summary type="html">Summary:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://bsjian.github.io/Jekyll-Blog/assets/images/markdown.jpg" /></entry><entry><title type="html">Coping With NP-Completeness - Local Search</title><link href="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search/" rel="alternate" type="text/html" title="Coping With NP-Completeness - Local Search" /><published>2018-11-13T12:00:00-05:00</published><updated>2018-11-13T12:00:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
 
 &lt;p&gt;This post will introduce branch and bound method.&lt;/p&gt;
 &lt;ul&gt;
@@ -184,11 +366,11 @@ number of temperature values)&lt;/li&gt;
 
 &lt;p&gt;When you @BBosheng with hash tag #helloworld, the bot will reply you immediately!&lt;/p&gt;
 
-&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/BBosheng?ref_src=twsrc%5Etfw&quot;&gt;@BBosheng&lt;/a&gt; He is a BOT &lt;a href=&quot;https://twitter.com/hashtag/HelloWorld?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#HelloWorld&lt;/a&gt;&lt;/p&gt;&amp;mdash; Missakakuma (@missakakuma) &lt;a href=&quot;https://twitter.com/missakakuma/status/1061448080552312832?ref_src=twsrc%5Etfw&quot;&gt;November 11, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/BBosheng?ref_src=twsrc%5Etfw&quot;&gt;@BBosheng&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/HelloWorld?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#HelloWorld&lt;/a&gt; how re you doing&lt;/p&gt;&amp;mdash; angjk (@jianbosheng) &lt;a href=&quot;https://twitter.com/jianbosheng/status/1069705784127299590?ref_src=twsrc%5Etfw&quot;&gt;December 3, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;#HelloWorld back to you!&lt;/p&gt;&amp;mdash; Bot (@BBosheng) &lt;a href=&quot;https://twitter.com/BBosheng/status/1061448088202678272?ref_src=twsrc%5Etfw&quot;&gt;November 11, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/hashtag/HelloWorld?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#HelloWorld&lt;/a&gt; Back to you&lt;/p&gt;&amp;mdash; Bot (@BBosheng) &lt;a href=&quot;https://twitter.com/BBosheng/status/1069706170519183360?ref_src=twsrc%5Etfw&quot;&gt;December 3, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/div&gt;
 
@@ -1414,41 +1596,4 @@ Output:
 
 &lt;p align=&quot;center&quot;&gt;
   &lt;img /&gt;
-&lt;/p&gt;</content><author><name>boshengjian</name></author><category term="project" /><category term="Chrome Extension" /><category term="Weather Forecast" /><summary type="html"></summary></entry><entry><title type="html">:tent: Yelp Camp: A MEN Stack website</title><link href="https://bsjian.github.io/Jekyll-Blog/Yelp-Camp/" rel="alternate" type="text/html" title=":tent: Yelp Camp: A MEN Stack website" /><published>2018-05-23T22:10:00-04:00</published><updated>2018-05-23T22:10:00-04:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Yelp-Camp</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Yelp-Camp/">&lt;p&gt;&lt;img src=&quot;/assets/images/projects/yelpcamp/yelpcamp.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Yelp Camp is a website built with MongoDB, Express.js and Node.js
-&lt;a href=&quot;https://radiant-headland-94269.herokuapp.com/&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;
-
-&lt;iframe src=&quot;https://radiant-headland-94269.herokuapp.com/&quot; width=&quot;100%&quot; height=&quot;800&quot;&gt;
-  &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
-&lt;/iframe&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;What has inside?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Register/Log In Page
-  &lt;img src=&quot;/assets/images/projects/yelpcamp/yelpcamp_register.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/images/projects/yelpcamp/yelp_login.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Campgrounds Site
-  &lt;img src=&quot;/assets/images/projects/yelpcamp/campgrounds.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Campground Detail
-  You can add/edit your comments
-  &lt;img src=&quot;/assets/images/projects/yelpcamp/camp_datail.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Create and edit a Campground
-  &lt;img src=&quot;/assets/images/projects/yelpcamp/create.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/images/projects/yelpcamp/camp_edit.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;</content><author><name>boshengjian</name></author><category term="project" /><category term="website" /><category term="full stack" /><category term="MangoDB" /><category term="Express.js" /><category term="Node.js" /><summary type="html"></summary></entry></feed>
+&lt;/p&gt;</content><author><name>boshengjian</name></author><category term="project" /><category term="Chrome Extension" /><category term="Weather Forecast" /><summary type="html"></summary></entry></feed>
