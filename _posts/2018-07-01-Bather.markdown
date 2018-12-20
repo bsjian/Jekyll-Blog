@@ -14,7 +14,7 @@ author: boshengjian
 externalLink: false
 ---
 
-![Screenshot](/assets/images/projects/bather/atlanta.png)
+![Screenshot](/assets/projects/bather/atlanta.png)
 
 Bather is a weather forecast Chrome Extension, who gets weather information from OpenWeatherMap's API.  
 
@@ -24,9 +24,9 @@ Bather is a weather forecast Chrome Extension, who gets weather information from
 ---
 
 - You Can Search your Location
-    ![Screenshot](/assets/images/projects/bather/change_location.png)
+    ![Screenshot](/assets/projects/bather/change_location.png)
 
-    ![Screenshot](/assets/images/projects/bather/search.png)
+    ![Screenshot](/assets/projects/bather/search.png)
 
 
 

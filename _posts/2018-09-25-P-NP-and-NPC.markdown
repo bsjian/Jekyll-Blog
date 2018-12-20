@@ -34,9 +34,9 @@ There are tons of problems in our natural world. Those problems differs in terms
 
 Among all the problems, the easiest ones are called P problems, which can be solved in polynomial time. [Wikipedia](https://en.wikipedia.org/wiki/P_(complexity)) defines P problems as "all decision problems can be solved by a deterministic Turing machine using a polynomial amount of computation time, or polynomial time".
 
-Famous P problem: [Travelling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+Famous NP problem: [Travelling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
 
-![Screenshot](/assets/images/blogs/P_NP_NPC/TSP.png)
+![Screenshot](/assets/blogs/P_NP_NPC/TSP.png)
 - For each two cities, an integer cost is given to travel from one of the
 two cities to the other. The salesperson wants to make a minimum
 cost circuit visiting each city exactly once.
@@ -64,7 +64,7 @@ polynomial time
 - X(i) = YES <=> Y(f(i)) = YES 
 - X is polynomial reducible to Y can be written as **X <=<sub>p</sub> Y**
 
-![Screenshot](/assets/images/blogs/P_NP_NPC/reduction.png)
+![Screenshot](/assets/blogs/P_NP_NPC/reduction.png)
 
 ---
 
@@ -76,7 +76,7 @@ To prove NP = P is difficult, so we come up with NP-Complete problems. By defini
 
 The difference between NP-Hard and NP-Complete is that for NP-Hard, it's difficult to verify the candidate solution in polynomial time or it cannot be verified in polynomial time, thus NP-Hard includes NP-Complete. These are some problems which in NP-Hard are not NP-Complete, e.g. [Halting Problem](https://en.wikipedia.org/wiki/Halting_problem).
 
-![Screenshot](/assets/images/blogs/P_NP_NPC/P_np_np-complete_np-hard.svg)
+![Screenshot](/assets/blogs/P_NP_NPC/P_np_np-complete_np-hard.svg)
 
 ---
 
@@ -87,7 +87,7 @@ Recipe to establish NP-completeness of problem Y.
 - Step 2. Choose an NP-complete problem X.
 - Step 3. Prove that X <= <sub>p</sub> Y (poly-time reduction).
 
-![Screenshot](/assets/images/blogs/P_NP_NPC/problems.png)
+![Screenshot](/assets/blogs/P_NP_NPC/problems.png)
 <center>How NP-C problems are discovered</center>
 
 Here is a [list](https://en.wikipedia.org/wiki/List_of_NP-complete_problems) of NP-Complete problems.

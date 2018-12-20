@@ -17,7 +17,7 @@ author: boshengjian
 externalLink: false
 ---
 
-![Screenshot](/assets/images/projects/yelpcamp/yelpcamp.png)
+![Screenshot](/assets/projects/yelpcamp/yelpcamp.png)
 
 Yelp Camp is a website built with MongoDB, Express.js and Node.js
 [Check it out](https://radiant-headland-94269.herokuapp.com/) here.
@@ -32,24 +32,24 @@ Yelp Camp is a website built with MongoDB, Express.js and Node.js
 What has inside?
 
 - Register/Log In Page
-    ![Screenshot](/assets/images/projects/yelpcamp/yelpcamp_register.png)
+    ![Screenshot](/assets/projects/yelpcamp/yelpcamp_register.png)
 
-    ![Screenshot](/assets/images/projects/yelpcamp/yelp_login.png)
+    ![Screenshot](/assets/projects/yelpcamp/yelp_login.png)
 
 
 - Campgrounds Site
-    ![Screenshot](/assets/images/projects/yelpcamp/campgrounds.png)
+    ![Screenshot](/assets/projects/yelpcamp/campgrounds.png)
 
 
 - Campground Detail
     You can add/edit your comments
-    ![Screenshot](/assets/images/projects/yelpcamp/camp_datail.png)
+    ![Screenshot](/assets/projects/yelpcamp/camp_datail.png)
 
 
 - Create and edit a Campground
-    ![Screenshot](/assets/images/projects/yelpcamp/create.png)
+    ![Screenshot](/assets/projects/yelpcamp/create.png)
 
-    ![Screenshot](/assets/images/projects/yelpcamp/camp_edit.png)
+    ![Screenshot](/assets/projects/yelpcamp/camp_edit.png)
 
 ---
 

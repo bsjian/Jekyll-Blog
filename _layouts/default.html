@@ -92,8 +92,10 @@ layout: compress
     {% include icons.html %}
 </body>
      <script type="text/javascript">
-     var images = ['1', '2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28'];
-     var picscr = "{{ site.url }}/assets/images/background" + images[Math.floor(Math.random() * images.length)] + '.jpg';
+     // var images = ['1', '2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28'];
+     
+     var images = ['1', '2','3','4','5','6','7','8','9','10','11','12','13'];
+     var picscr = "{{ site.url }}/assets/backgrounds/background" + images[Math.floor(Math.random() * images.length)] + '.jpg';
      $('#bg').css('background-image', 'url(' + picscr + ')');
     </script>
 </html>

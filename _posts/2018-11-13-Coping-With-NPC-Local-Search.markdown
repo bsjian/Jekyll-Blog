@@ -17,7 +17,7 @@ description: Coping with NP-Completeness
 
 ## Summary:
 
-This post will introduce branch and bound method. 
+This post will introduce local search methods. 
 - [Introduction](#introduction)
     + [Search-Process](#search-process)
     + [Several-Concepts](#several-concepts)
@@ -44,7 +44,7 @@ Local Search can be generalized as:
 positions
 - use evaluation function to choose among neighboring positions
 
-![LocalSearch](/assets/images/blogs/coping/local_search_metaphor.png)
+![LocalSearch](/assets/blogs/coping/local_search_metaphor.png)
 
 ### Several Concepts
 
@@ -67,7 +67,7 @@ solutions”)
 
 #### TSP 
 
-![Screenshot](/assets/images/blogs/coping/tsp_neighboring.png)
+![Screenshot](/assets/blogs/coping/tsp_neighboring.png)
 
 Search Space: all permutations of the cities (each defines a cycle)
 3-opt – delete 3 edges and reconnect fragments into 1 cycle
@@ -80,8 +80,8 @@ k-opt – delete k edges and reconnect fragments into 1 cycle
 
 Hill Climbing is basically choosing the neighbor with the largest improvement as the next state until a local optimal solution is reached. It's very fast and works well for certain problems.
 
-![Screenshot](/assets/images/blogs/coping/hill_climbing.png)
-![Screenshot](/assets/images/blogs/coping/hill_climbing_algo.png)
+![Screenshot](/assets/blogs/coping/hill_climbing.png)
+![Screenshot](/assets/blogs/coping/hill_climbing_algo.png)
 
 However, this local search only finds the local optimization, which is not guaranteed to be the overall optimal solution, as there might be multiple hills. And it is prone to be misguided by evaluation/objective function.
 
@@ -106,7 +106,7 @@ Steps:
 - Hill-climb until local optima
 - Start at another random position
 
-![Screenshot](/assets/images/blogs/coping/random_hill_climbing.png)
+![Screenshot](/assets/blogs/coping/random_hill_climbing.png)
 
 ### The WalkSAT Algorithm
 
@@ -150,11 +150,11 @@ Select a neighbor at random.
 - Otherwise, go there with some probability (worsening move).
 - Probability goes down with time (similar to temperature cooling
 
-![Screenshot](/assets/images/blogs/coping/sa_algo.png)
+![Screenshot](/assets/blogs/coping/sa_algo.png)
 
 Acceptance criterion (Metropolis condition): choose new solution s' over old solution s with probability (maximization)
 
-![Screenshot](/assets/images/blogs/coping/sa_formula.png)
+![Screenshot](/assets/blogs/coping/sa_formula.png)
 
 - Initial temperature T0
 - Annealing (cooling) schedule: how to update the

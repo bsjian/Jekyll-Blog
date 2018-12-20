@@ -43,12 +43,12 @@ Facts on Branch and Bound:
 
 ### Pseudo Code
 
-![Pseudocode](/assets/images/blogs/coping/branch_algo.png)
+![Pseudocode](/assets/blogs/coping/branch_algo.png)
 
 ### Travelling Salesman Problem
 [Travelling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem): Given a complete graph G=(V,E), a cost function w:E->N, and an integer k, is there a cycle C going through each vertex once and only once, with ∑<sub>e∈C</sub> w(e) ≤ k ?
 
-![Screenshot](/assets/images/blogs/coping/TSP.png)
+![Screenshot](/assets/blogs/coping/TSP.png)
 
 - Partial Solution (a, T, b): a path from a start node a to b, going through nodes T (same as HamCycle). 
 - Expand: choose an edge from b to V-T-{a,b} (same as HamCycle)
@@ -64,7 +64,7 @@ having a short TSP tour)
 
 ##### Naive Bounding
 
-![Screenshot](/assets/images/blogs/coping/TSP_bound_1_1.png)
+![Screenshot](/assets/blogs/coping/TSP_bound_1_1.png)
 
 Because a tour must leave every vertex exactly once, a lower bound on the length of a tour is the sum of the minimum cost of leaving every vertex. 
 
@@ -76,10 +76,10 @@ For a given edge (u, v), think of half of its weight as the exiting cost of u, a
 ##### Reduced Cost Matrix
 
 Step 1 to reduce: Search each row for the smallest value
-![Screenshot](/assets/images/blogs/coping/reduced_cost_row.png)
+![Screenshot](/assets/blogs/coping/reduced_cost_row.png)
 
 Step 2 to reduce: Search each column for the smallest value
-![Screenshot](/assets/images/blogs/coping/reduced_cost_col.png)
+![Screenshot](/assets/blogs/coping/reduced_cost_col.png)
 
 The total cost of 84+12=96 is subtracted. Thus, we know the lower bound
 of feasible solutions to this TSP problem is 96.
@@ -106,7 +106,7 @@ Multiple Choice: -->
 
 Consider Reduced Cost Matrix, if we take the edge (4,6), Lower Bound won't change; if not taking that edge, add 32 to our Lower Bound.
 
-![Screenshot](/assets/images/blogs/coping/TSP_decision_tree.png)
+![Screenshot](/assets/blogs/coping/TSP_decision_tree.png)
 <center>High-Level State-Space Tree</center>
 
 Then, again reduce the current matrix by one row and one column to get the current Lower Bound. Set the cost (6,4) to infinity (so that we 're not going back to 4).

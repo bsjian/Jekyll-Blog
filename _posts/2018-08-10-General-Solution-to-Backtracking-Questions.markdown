@@ -76,7 +76,7 @@ if there is no such option, it backtracks one more level up the tree, and so on.
 
 ### Pseudo-code
 
-![Pseudocode](/assets/images/blogs/coping/branch_algo.png)
+![Pseudocode](/assets/blogs/coping/branch_algo.png)
 
 (X,Y) associated with each node, where X is a partial solution, and Y is the remaining subproblem.
 

@@ -48,7 +48,7 @@ Create a horizontal bar chart with its vertical axis denoting the city names (or
 
 When hovering the mouse over a bar, a smaller line chart representing the population growth of that city for each year (2013-2017) should be displayed in the top right corner. For example, Los Angeles has a growth value of 0.84%, 0.79%, 0.78%, 0.70%, 0.47% for the years 2013, 2014, 2015, 2016 and 2017 respectively. On hovering over the bar representing Los Angeles, a line chart depicting these 5 values in % is displayed.
 
-![Screenshot](/assets/images/projects/d3_warm_up/interactive.png)
+![Screenshot](/assets/projects/d3_warm_up/interactive.png)
 
 <p data-height="650" data-theme-id="light" data-slug-hash="eQNVOa" data-default-tab="result" data-user="bsjian" data-pen-title="CSE6242 HW2 Q5" class="codepen">See the Pen <a href="https://codepen.io/bsjian/pen/eQNVOa/">CSE6242 HW2 Q5</a> by Bosheng Jian (<a href="https://codepen.io/bsjian">@bsjian</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>

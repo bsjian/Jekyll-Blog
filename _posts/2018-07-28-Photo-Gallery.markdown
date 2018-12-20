@@ -27,26 +27,26 @@ Bosheng's Photo Gallery is my personal Gallery enbaled built with MongoDB, Expre
 
 ## Welcoming Page
 
-![Screenshot](/assets/images/projects/gallery/welcome.png)
+![Screenshot](/assets/projects/gallery/welcome.png)
 
 ## Sign Up/ Log In
 
-![Screenshot](/assets/images/projects/gallery/register.png)
+![Screenshot](/assets/projects/gallery/register.png)
 
-![Screenshot](/assets/images/projects/gallery/login.png)
+![Screenshot](/assets/projects/gallery/login.png)
 
 ## GoogleMaps API
 
-![Screenshot](/assets/images/projects/gallery/map.png)
+![Screenshot](/assets/projects/gallery/map.png)
 
 ## Cloudinary
 
 All photos are stored in Cloudinary
 
-![Screenshot](/assets/images/projects/gallery/cloud.png)
+![Screenshot](/assets/projects/gallery/cloud.png)
 
 You can add/edit your comments
-    ![Screenshot](/assets/images/projects/gallery/camp_datail.png)
+    ![Screenshot](/assets/projects/gallery/camp_datail.png)
 
 
 

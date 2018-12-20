@@ -30,11 +30,11 @@ Go to [developer.twitter.com](https://developer.twitter.com/) and apply for a de
 
 Click apps and create a new App.
 
-![Screenshot](/assets/images/projects/twitter-bot/click-app.png)
+![Screenshot](/assets/projects/twitter-bot/click-app.png)
 
 Get API Keys:
 
-![Screenshot](/assets/images/projects/twitter-bot/api.png)
+![Screenshot](/assets/projects/twitter-bot/api.png)
 
 I also used [Tweepy](http://www.tweepy.org/) to access the Twitter API. Check out the docs [here](https://tweepy.readthedocs.io/en/v3.5.0/)
 
