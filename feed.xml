@@ -1,6 +1,455 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://bsjian.github.io/Jekyll-Blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bsjian.github.io/Jekyll-Blog/" rel="alternate" type="text/html" /><updated>2018-12-03T16:54:42-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/</id><title type="html">Bosheng Jian</title><subtitle>My blog where I upload boring stuff</subtitle><entry><title type="html">Empirical Analysis of Algorithms</title><link href="https://bsjian.github.io/Jekyll-Blog/Empirical-Analysis-of-Algorithms/" rel="alternate" type="text/html" title="Empirical Analysis of Algorithms" /><published>2018-11-15T12:00:00-05:00</published><updated>2018-11-15T12:00:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Empirical-Analysis-of-Algorithms</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Empirical-Analysis-of-Algorithms/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://bsjian.github.io/Jekyll-Blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bsjian.github.io/Jekyll-Blog/" rel="alternate" type="text/html" /><updated>2018-12-20T12:57:26-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/</id><title type="html">Bosheng Jian</title><subtitle>My blog where I upload boring stuff</subtitle><entry><title type="html">Rental Recommendation for Commuters</title><link href="https://bsjian.github.io/Jekyll-Blog/CSE-6242-Team-Aha-Project/" rel="alternate" type="text/html" title="Rental Recommendation for Commuters" /><published>2018-12-04T19:04:00-05:00</published><updated>2018-12-04T19:04:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/CSE%206242-Team-Aha-Project</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/CSE-6242-Team-Aha-Project/">&lt;h2 id=&quot;whats-the-problem&quot;&gt;What’s the Problem?&lt;/h2&gt;
 
-&lt;p&gt;This post will introduce branch and bound method.&lt;/p&gt;
+&lt;p&gt;Nowadays, more than 90% people use web systems to buy or sell their real estates. But none of current systems is designed for meeting all special needs, such as safety concern and transportation requirement.&lt;/p&gt;
+
+&lt;p&gt;So we want to build a housing rental recommendation system for those who commutes daily, which can recommend housing to users their personal references, such as basic information, safety anticipation, and transportation requirement.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-we-have-done&quot;&gt;What we have done&lt;/h2&gt;
+
+&lt;h3 id=&quot;dataset-collection&quot;&gt;Dataset Collection&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Crime Data&lt;/strong&gt;: Downloaded 11 types crime data of Atlanta Police Department from 2009 to 2018.
+&lt;strong&gt;Map Data&lt;/strong&gt;: Collected direction, distance, transportation data from Google map API.
+&lt;strong&gt;Zillow Data&lt;/strong&gt;: Used Python scraping to access and download each apartment’s basic information.
+&lt;strong&gt;Yelp Data&lt;/strong&gt;: Used Python scraping to apartments’information about reviews and rating.
+&lt;strong&gt;Walkable Data&lt;/strong&gt;: used Python scraping to access apartments’ convenience for transportation.&lt;/p&gt;
+
+&lt;h3 id=&quot;recommending&quot;&gt;Recommending&lt;/h3&gt;
+&lt;p&gt;We access ranking based on users’ basic preference form Zillow, reviews and ratings from Yelp, amount of types of crime to qualify the safety anticipation of apartments, walkable score data for qualifying convenience of nearby transportation and direction information from Google Map API to fit users’ demand of specific places.&lt;/p&gt;
+
+&lt;h3 id=&quot;visualization&quot;&gt;Visualization&lt;/h3&gt;
+&lt;p&gt;our website can be divided into two main functional parts. The first one is obtaining filter options from users and the second is display our result in map. The fundamental tools we use are HTML5 with CSS3 and JavaScript. Meanwhile, some powerful library like Leafletjs are used to help us build the website. Whenever we receive a search request from user, we will send a HTTP request to our back‐end server to get the recommendation result.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/projects/rent/map.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;The result page&lt;/center&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;check-it-out&quot;&gt;Check it out:&lt;/h2&gt;
+
+&lt;p&gt;See the code on Github: &lt;a href=&quot;https://github.com/bsjian/CSE6242-Team-Aha-Project&quot;&gt;https://github.com/bsjian/CSE6242-Team-Aha-Project&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://cse6242-224423.appspot.com/&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src=&quot;https://cse6242-224423.appspot.com/&quot; width=&quot;100%&quot; height=&quot;800&quot;&gt;
+  &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;to-it-locally&quot;&gt;To it locally:&lt;/h2&gt;
+
+&lt;p&gt;(1)First, follow the README_BackEnd to run the backend server.&lt;/p&gt;
+
+&lt;p&gt;(2)Second, follow the README_FrontEnd to run the front end server.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IMPORTANT: Please make sure that the local host and port number of backend server is correctly added to line 25 and line 27 in app.js in FrontEnd directory. (i.e. Postname:127.0.0.1.  Port: 3000)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;(3)Third, open your web browser and visit our website via the host and port number of your frontend program. (i.e. 127.0.0.1:3000)&lt;/p&gt;
+
+&lt;h2 id=&quot;back-end&quot;&gt;Back End&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTICE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This project does contain scraping programs
+that do not respect some websites’ /robots.txt
+We are aware that this is not a good manner and 
+we are not using and will never use those code 
+other than this class project.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IMPORTANT INFORMATION&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Execute the programs on large searching range or 
+large number of searches in a short period of time&lt;/p&gt;
+
+&lt;p&gt;There are 11 python files:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;connectsql.py:              For querying the sqlite storing crime data;&lt;/li&gt;
+  &lt;li&gt;flaskhelper_revised.py:     Helper functions for main flask app;&lt;/li&gt;
+  &lt;li&gt;google_Distance.py:         For getting distance between locations using Google Map API; [fill in your API key at ‘# fill in your API key’ before running]&lt;/li&gt;
+  &lt;li&gt;google_Score.py:            For getting place’s rating on Google Map using Google Places API; [fill in your API key at ‘# fill in your API key’ before running]&lt;/li&gt;
+  &lt;li&gt;google_Stores.py:           For getting nearby store information using Google Places API; [fill in your API key at ‘# fill in your API key’ before running]&lt;/li&gt;
+  &lt;li&gt;price_as_feature.py:        For handling special price information format for apartments on Zillow;&lt;/li&gt;
+  &lt;li&gt;project_v2.py:              Main flask app;&lt;/li&gt;
+  &lt;li&gt;scrape_zips.py:             For scraping zip codes within distance from a website;&lt;/li&gt;
+  &lt;li&gt;yelp_scrape_real_time.py    For scraping real time yelp data;&lt;/li&gt;
+  &lt;li&gt;zillow_scrape_real_time.py  For scraping real time zillow data;&lt;/li&gt;
+  &lt;li&gt;crime_data_cleaning.py      For cleaning the crime dataset;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is also a folder ‘crime_data’ containing sqlite dataset storing crime data, original dataset and python file for cleaning the dataset.&lt;/p&gt;
+
+&lt;p&gt;There is also a file ‘test.json’ containing a example/testing json file returned by backend.&lt;/p&gt;
+
+&lt;p&gt;Main scraping python files have their own testing code for testing/debugging (IP banned issue or other cases). To get specific run instruction, execute:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python yelp_scrape_real_time.py -help
+$ python zillow_scrape_real_time.py -help
+$ python price_as_feature.py -help
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To run the main flask app ‘project_v2.py’ on server for public IP address visiting, please uncomment the line 215 and comment line 216.&lt;/p&gt;
+
+&lt;p&gt;List for flask reroutings:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;‘/test’:            return the testing test.json file;&lt;/li&gt;
+  &lt;li&gt;’/’:                return index.html for server debugging purpose only (note that the index.html file is not included, it can be any file ONLY for debugging purpose);&lt;/li&gt;
+  &lt;li&gt;‘/apartmentprice’   return formatted prices for apartments on zillow;&lt;/li&gt;
+  &lt;li&gt;‘/filters’          return list of found apartments satisfy the given filters;&lt;/li&gt;
+  &lt;li&gt;
+
+    &lt;p&gt;[example: /filters?address=’address’&amp;amp;type=h&amp;amp;beds=1&amp;amp;baths=1&amp;amp;pets=1&amp;amp;parking=1&amp;amp;laundry=1&amp;amp;price=500-1000&amp;amp;rate=3.5&amp;amp;review_count=10&amp;amp;places=xxx,yyy,zzz&amp;amp;travelling=driving&amp;amp;time_limit=20]&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The backend files should be in below folder structure for successful running without modifying the code:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/
+|__ connectsql.py
+|__ flaskhelper_revised.py
+|__ google_Distance.py
+|__ google_Score.py
+|__ price_as_feature.py
+|__ project_v2.py
+|__ scrape_zips.py
+|__ test.json
+|__ yelp_scrape_real_time.py
+|__ zillow_scrape_real_time.py
+|__ crime_data/
+    |__ crime.db
+    |__ crime_data_cleaning.py
+    |__ crime_data.csv.zip
+    |__ COBRA-2009-2017.csv.zip
+    |__ cobra-2018.csv.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Before execute the backend, ensure you have installed following library in Python3: Flask, unicodecsv, requests, lxml, numpy&lt;/p&gt;
+
+&lt;p&gt;To execute the project’s backend, first fill in your Google API key in line 5 of file google_Distance.py. Then execute:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo python project_v2.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;front-end&quot;&gt;Front End&lt;/h2&gt;
+
+&lt;h3 id=&quot;live-demo&quot;&gt;Live Demo&lt;/h3&gt;
+
+&lt;p&gt;To see the app, go to &lt;a href=&quot;https://cse6242-224423.appspot.com/&quot;&gt;https://cse6242-224423.appspot.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Responsive web design&lt;/li&gt;
+  &lt;li&gt;Customized Marker Icon in Leaflet.js map&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+
+&lt;h4 id=&quot;clone-or-download-this-repository&quot;&gt;Clone or download this repository&lt;/h4&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.gatech.edu/bjian3/CSE6242-Front-End.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;install-dependencies&quot;&gt;Install dependencies&lt;/h4&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;start-application&quot;&gt;Start Application&lt;/h4&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node app.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;built-with&quot;&gt;Built with&lt;/h3&gt;
+
+&lt;h4 id=&quot;front-end-1&quot;&gt;Front-end&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ejs.co/&quot;&gt;ejs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/maps/&quot;&gt;Google Maps APIs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://getbootstrap.com/docs/3.3/&quot;&gt;Bootstrap&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://leafletjs.com&quot;&gt;Leaflet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jquery.com/&quot;&gt;JQuery&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>boshengjian</name></author><category term="project" /><category term="CSE6242" /><category term="Data Visualization" /><summary type="html">What’s the Problem?</summary></entry><entry><title type="html">Housing Recommendation System - Report</title><link href="https://bsjian.github.io/Jekyll-Blog/Housing-Recommendation-System-Progress-Report/" rel="alternate" type="text/html" title="Housing Recommendation System - Report" /><published>2018-12-03T23:18:00-05:00</published><updated>2018-12-03T23:18:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Housing-Recommendation-System-Progress-Report</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Housing-Recommendation-System-Progress-Report/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;See the PDF version &lt;a href=&quot;https://drive.google.com/file/d/1GATi0CzKwm3YkMevMGeomTWYtWJsAdzW/view?usp=sharing&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;See the code on &lt;a href=&quot;https://github.com/bsjian/CSE6242-Team-Aha-Project&quot;&gt;Github&lt;/a&gt;, and the explanition &lt;a href=&quot;http://www.boshengjian.com/CSE-6242-Team-Aha-Project/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://cse6242-224423.appspot.com/&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the final report for CSE6242 Data and Visual Analytics.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction-and-problem-definition&quot;&gt;Introduction-and-Problem-Definition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#literature-review&quot;&gt;Literature-Review&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#proposed-methods&quot;&gt;Proposed Methods&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#evaluation&quot;&gt;Evaluation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#conclusion&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#reference&quot;&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction-and-problem-definition&quot;&gt;Introduction and Problem Definition&lt;/h2&gt;
+
+&lt;p&gt;Nowadays, more than 90 percent people use web recommendation systems to buy or sell their real estates [1,2]. There are plenty of platforms which integrate the real estate data and present them in one website, like Google, Yelp, Zillow [3].&lt;/p&gt;
+
+&lt;p&gt;However, none of these current systems is designed for meeting all needs of college students and daily commuters in one place. Those people, when looking for housing, need to search among lots of different websites to gain information they need. For example, one might need to search for houses on Zillow, then move to Google maps for transit time and then look up reviews of leasing offices or agencies. Furthermore, one might have additional preferences such as shopping location, favorite store and dog parks.&lt;/p&gt;
+
+&lt;p&gt;So we want to build a housing rental recommendation website for those who commutes daily, which can provide renting recommendations based on users’ personal references, such as basic information, safety anticipation, and transportation requirement.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;literature-review&quot;&gt;Literature Review&lt;/h2&gt;
+
+&lt;p&gt;Various attributes were found to be common when people search for a house to rent: the property location, property type, rent, number of bedrooms, number of bathrooms, the area of living space, availability of parking space, whether they are furnished or serviced and the daily commuting distance and time. Many researches have been done to analyze the relationship between transportation and other metrics based on renters’ choices of renting [4-7]. Researches also show that the renters’ choices are also highly related with their occupations. Those researches show how we may improve our project in the future, which is using the date came from our own website to build model and improve the recommendation system.&lt;/p&gt;
+
+&lt;p&gt;At the same time, crime rate is an important factor when it comes to residential decision. It is known that people would prefer to live in safer areas, even if it’s more expensive. Researchers used a two-stage residential sorting model and the results showed that people are willing to pay more to move to a location with lower violent crime occurrences [8,10]. However, it’s hard for us to quantify the extent as we don’t have dataset of how much more money people are willing to pay for an apartment with lower violent crime. 
+Also, it is undeniable that crime rate and house price are innately correlated. George et al used instrumental variable (IV) method to analyze the relationship of crime rate and land price in Japan and concluded that every 10% decrease in burglaries rate would result an average 1% rise in land price [11]. Given that it was conducted in Japan, we still want to use 
+the same method to analyze the relationship (between crime rate and house price) in Atlanta. As for crime types, researchers have differentiated property crime and violent crime by using hedonic regression, and also quantified the intangible cost of crime [12-14]. The results differed from poor, middle and rich neighborhoods and, violent crime is the dominant factor affecting house prices. Thus we aim to only focus on violent crimes in Atlanta.&lt;/p&gt;
+
+&lt;p&gt;Our system uses multiple datasets from different sources, including user input data and verified or unverified public datasets. Gelman et al points out that plenty of information input by end-users are inaccurate [14]. The author uses data event analysis and error cluster analysis for investigating errors. Data event analysis involves a review of all the processes that capture or manipulate the data and error cluster analysis centers on a data subset that contains data suspected of being incorrect. We plan to use similar methods to verify inaccurate data and clean inaccurate data.&lt;/p&gt;
+
+&lt;p&gt;As for recommendation system, Verma et al shows how to build recommendation system with Hadoop and utilizes recommendation algorithms in Mahout Architecture [15]. To solve problems of natural language ambiguity, Manikrao et al proposes a classification of semantic approaches into top-down and bottom-up, rely on the integration of external knowledge sources and a lightweight semantic representation based on the hypothesis [17]. To build a semantic recommendation system, researchers also proposed that adding a semantic matcher in recommendation system to match semantic documents from web service users [16]. Thus we plan to try similar recommendation system framework as to construct an online semantic content-based recommendation system.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;proposed-methods&quot;&gt;Proposed Methods&lt;/h2&gt;
+
+&lt;h3 id=&quot;intuition&quot;&gt;Intuition&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Comparing to other rental housing website like Zillow, we creatively come up with a new method to analyze data and present data people want to know.&lt;/li&gt;
+  &lt;li&gt;The dataset we are using is comprehensive and timely. In terms of collecting data, we are using real time data because people want to know the up-to-date information. Besides, our dataset is comprehensive. For example, we analyze the crime data which is not included in all other websites’ datasets.&lt;/li&gt;
+  &lt;li&gt;We also analyze data from users’ perspective. We rank the rental houses in three different ways, which are historical review ranking, convenience ranking and safety ranking. The data we show to users is useful, significant and innovative. These data are not user- accessible in other websites.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-collection-and-refining&quot;&gt;Data Collection and Refining&lt;/h3&gt;
+
+&lt;p&gt;Our data includes downloaded data and scraped data. And there are 5 main sources of our data, including crime data downloaded from Atlanta Police Department, apartment data scraped from Zillow, reviews and rating data scraped from Yelp and via Google Map APIs, map data via Google Map API, and neighborhood convenience data scraped from Walkable.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;For crime data: we downloaded 11 types crime data of Atlanta Police Department from 2009 to 2018. The data includes crime type, location, time and neighborhood.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For map data: based on the daily commute location, daily commute method and time limit, we calculate daily commute distance and then we get all the zipcodes in the circle with daily commute location as central and daily commute distance as radius. Further when we get candidate apartments, based on users’ interest places like gym or theater, we use Google Map API to get the closest users’ interest places around each candidate apartment and the distance between them.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For Zillow data, we used Python scraping to access apartment basic information by zipcodes we get in map data and users’ requirements from frontend. Then we remove all the apartments that don’t satisfy the time limit constraint.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For review and rating data, we use Python scraping to access each candidate apartment’s customer review and rating from Yelp and also get similar information via Google Map API.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For neighborhood convenience data, we use Python scraping to access information like walk score, bike score and transition score from Walkable by longitude and latitude information of each candidate apartment.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/cse6242_report/figure1.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;Figure.1 Sample Crime Raw Dataset&lt;/center&gt;
+
+&lt;h3 id=&quot;apartment-ranking&quot;&gt;Apartment Ranking&lt;/h3&gt;
+
+&lt;p&gt;In the beginning, users are required to select their daily commute location. Based on this location, 30 candidate apartments will be selected by scraping the data from Zillow. Then we would rank the apartments based on our algorithm. There are three criterions in ranking apartments, including historical review, safety and convenience.&lt;/p&gt;
+
+&lt;p&gt;In order to rank the apartments, we calculate the scores for each apartment. For historical review scores, we directly scrape the apartment’s score on Yelp. For the convenience scores, the scores are obtained from Zillow by real-time scraping. The convenience score includes three parts which are walk score, bike score and transition score.&lt;/p&gt;
+
+&lt;p&gt;For the safety score, we calculate the number of last 10 years’ accidents happened around each apartment. The equation of calculating the safety score is&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/cse6242_report/equation.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where Num i denotes the number of accidents happened around apartment i. Since we scrape 30 apartments from Zillow, the range of index i is from 1 to 30. Min denotes the minimum value among all Num i and Max denotes the maximum value among all Num i.&lt;/p&gt;
+
+&lt;p&gt;Based on these three scores, the overall grade of each apartment is calculated by taking the average of these three scores. The recommendation ranking is done based on the overall grade.&lt;/p&gt;
+
+&lt;h3 id=&quot;user-interactive-and-visualization&quot;&gt;User Interactive and Visualization&lt;/h3&gt;
+
+&lt;h4 id=&quot;what-interface-and-their-goals&quot;&gt;What Interface and their goals&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A welcome Interface: This page includes an introduction of our project and a simple tutorial about how to use it. It aims to help the users begin their first try on our
+recommendation system.&lt;/li&gt;
+  &lt;li&gt;Search-filter Interface: This page has 4 sections. Basic information section contains
+check-boxes, drop down menus and range sliders which enables users to customize their
+preference including price range, beds, baths, rating on Google and Yelp, etc. In
+transportation part, user need to locate their place of work/study and preferred distance or
+time of commuting. In keyword search section, user can input their preferred places.&lt;/li&gt;
+  &lt;li&gt;Result Interface: A page shows a map with our recommended rental position ordered by
+rank. In this page, users are able to scroll around the map and see on the map where our
+recommended apartments are and the keyword search results. Other basic map operations
+such as zoom in and out are also allowed.&lt;/li&gt;
+  &lt;li&gt;Detailed Information Interface: When users click a marker on in the result page, a
+detailed information page will pop up, and tell them on why we recommend it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;how-to-build-the-interface-tools&quot;&gt;How to build the interface (Tools)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTML5, CSS3 and JavaScipt: In general, our website can be divided into two main
+functional parts. The first one is obtaining filter options from users and the second is
+display our result in map. The fundamental tools we use are HTML5 with CSS3 and
+Javascript. Meanwhile, some powerful library in Javascript like React are used to help us
+build the website.&lt;/li&gt;
+  &lt;li&gt;Bootstrap (Search-filter Interface): After visiting the welcome page, a page with search
+condition and user preference options module will be displayed. For our search filter
+options, we consider Bootstrap a wonderful Javascript library to realize it. Bootstrap
+contains various pre-built module for input section in map search, which is very efficient
+and convenient if combined with CSS.&lt;/li&gt;
+  &lt;li&gt;For the actual display of map to show the recommendation result, we use Leafletjs library
+which contains interactive component for map display such as marker and pop-up
+function for showing details. We used the frame work in this Leafletjs library and
+rendered our recommendations into the map.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;user-interactive-and-visualization-1&quot;&gt;User Interactive and Visualization&lt;/h3&gt;
+
+&lt;h4 id=&quot;what-interface-and-their-goals-1&quot;&gt;What Interface and their goals&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A welcome Interface: This page includes an introduction of our project and a simple tutorial about how to use it. It aims to help the users begin their first try on our recommendation system.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Search-filter Interface: This page has 4 sections. The Basic Information section contains checkboxes, drop down menus and range sliders which enables users to customize their preference on price range, number of beds and baths, pets policy, parking, etc. The Safety Requirement section contains two range sliders where users weigh their concern from 1 to 10 to violent crimes and property crimes. The Transportation Information section contains a search box where user can locate their place of work/ study (where they have to commute from home), a form where users input their prefered distance/ time of commuting and whether they walk or drive to commute. The Review Section enables users to select from 1 to 5 stars based on Yelp’s reviews thus serves to filter the recommendation results.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Result Interface: A page shows a map with our recommended rental position ordered by rank. In this page, users are able to scroll around the map and tap their interested positions to look for detail information and why we recommend it. Other basic map operations such as zoom in and out are also allowed.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;how-to-build-the-interface-tools-1&quot;&gt;How to build the interface (Tools)&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;HTML5, CSS3 and JavaScipt: In general, our website can be divided into two main functional parts. The first one is obtaining filter options from users and the second is display our result in map. The fundamental tools we use are HTML5 with CSS3 and Javascript. Meanwhile, some powerful library in Javascript like React are used to help us build the website.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;React (Search-filter Interface):  After visiting the welcome page, a page with result map and user preference options module will be displayed. For our search filter options, we consider Reactivesearch a wonderful Javascript library to realize it. Reactivesearch contains various pre-built module for filter section in map search, which is very efficient and convenient. For the actual display of map, we use Reactivemap library which contains interactive component for map display.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;final-effect&quot;&gt;Final Effect&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/cse6242_report/welcome.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;Figure.2 Welcome Page&lt;/center&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/cse6242_report/search.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;Figure.3 Search Page&lt;/center&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/cse6242_report/result.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;Figure.4 Result Page&lt;/center&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h2&gt;
+
+&lt;h3 id=&quot;result-and-experiment&quot;&gt;Result and Experiment&lt;/h3&gt;
+
+&lt;p&gt;For our recommendation system, we mainly want to add more features compared to existing
+recommendation service to satisfy users’ safety anticipation and transportation requirement. Therefore, 
+in order to evaluate our project, we asked for the feedback from our testing users. We first had the
+testing users utilize our website for searching for their next potential rentals and then we gave them
+the survey asking for their evaluation based on their experience with our website.&lt;/p&gt;
+
+&lt;p&gt;Also, since user experience is one of the top concern of a recommendation website, our website needs
+to give back results as quick as possible to limit the user’s waiting time. Given that our website needs
+to handle data from different sources and even with “real-time” scraping, efficiency of our codes are
+essential. We want to have our website generates searching and ranking results within 2 seconds
+based on our server’s computation resource. This time limit is our most important evaluation for
+program efficiency and user experience.&lt;/p&gt;
+
+&lt;p&gt;Our questions had two categories. The first category was for asking experience with our website alone
+and the other category was asking for comparison between our website and other existing solutions
+such as zillow.com. We not only asked user’s for opinions on the results but also asked for user’s
+satisfaction with our interface and visualization. By collecting the responses, we can answer the
+questions for our project evaluations - how good is our recommendation results; how is our
+recommendation system compared to others’; how is our website design.&lt;/p&gt;
+
+&lt;h3 id=&quot;detail-of-evaluation&quot;&gt;Detail of Evaluation&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/cse6242_report/survey.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;Figure.5 Screenshot of User Survey&lt;/center&gt;
+
+&lt;p&gt;We collected response from different groups of users for more accurate results. We had 40
+total validate responses - 3 of them were freshmen or sophomores at Georgia Tech, 9 were
+juniors or seniors at Georgia Tech, 15 were masters at Georgia Tech, 9 were PhD students at
+Georgia Tech and 4 were daily commuters working around Georgia Tech campus area.
+Below are the answers we got from our survey for testing users:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/cse6242_report/f6.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;Figure.6 Satisfaction for Recommendation&lt;/center&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/cse6242_report/f7.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;Figure.7 Satisfaction for Interface&lt;/center&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/cse6242_report/f8.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;Figure.8 Satisfaction Compared to Zillow&lt;/center&gt;
+
+&lt;p&gt;For further quantifying how well our project’s recommendations were, we also asked users
+whether or not they could found a satisfying result within the top 5 suggestions. Only 5 out of
+40 users were unable to find one within the top 5 suggestions. The recommendation
+algorithms and results yielded by the testing user survey met our expectation. However, our
+website usually took more than 10 seconds for generating the result since we have faced
+unforeseen challenge from scraping web pages. Our project failed meeting the 2-second
+expected time limit. This was also the main reason why users deducted points from user
+interface and visualization.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;In this project, we built a housing rental recommendation website, especially for off-campus
+living students and daily commuters who have their special needs. There are three main
+innovations for our project: First, this project innovatively comes up with the idea to design a
+housing rental recommendation website especially for off-campus students and commuters.
+Secondly, we used multiple datasets like Yelp, Zillow, crime dataset together to construct
+multi-feature filters for our recommendation system. Finally, our user interface is interactive
+and user-oriented. Our project will definitely contribute tremendous value in giving people an
+easy life.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;[1] National Association of Realtors. Home Buyer and Seller Generational Trends Report 2017. National Association of Realtors, 2017.&lt;br /&gt;
+[2] National Association of Realtors. Real Estate in a Digital Age Report 2017. National Association of Realtors, 2017.&lt;br /&gt;
+[3] Fang, Yao-Min, et al. “An integrated information system for real estate agency-based on service-oriented architecture.” Expert systems with applications 36.8 (2009): 11039-11044.&lt;br /&gt;
+[4] Weisbrod, Glen, Steven R. Lerman, and Moshe Ben-Akiva. “Tradeoffs in residential location decisions: Transportation versus other factors.” Transport Policy and Decision Making1.1 (1980): 13-26.&lt;br /&gt;
+[5] Bina, Michelle, Valdemar Warburg, and Kara Kockelman. “Location choice vis-à-vis transportation: Apartment dwellers.” Transportation Research Record: Journal of the Transportation Research Board 1977 (2006): 93-102.&lt;br /&gt;
+[6] Mathur, Shishir. “Impact of transportation and other jurisdictional-level infrastructure and services on housing prices.” Journal of Urban Planning and Development 134.1 (2008): 32-41.&lt;br /&gt;
+[7] Frenkel, Amnon, Edward Bendit, and Sigal Kaplan. “Residential location choice of knowledge-workers: The role of amenities, workplace and lifestyle.” Cities 35 (2013): 33-41.&lt;br /&gt;
+[8] Kutsuzawa, Ryuji, et al. The impact of crime on housing land prices and the effects of police boxes and voluntary groups on crime prevention in Japan. No. 60. 2010.&lt;br /&gt;
+[9] Zhang, Zhaohua, and Diane Hite. “House Value, Crime and Residential Location Choice.” 2015 Annual Meeting, January 31-February 3, 2015, Atlanta, Georgia. No. 196826. Southern Agricultural Economics Association, 2015.&lt;br /&gt;
+[10] Bayer, Patrick, Robert McMillan, and Kim Rueben. An Equilibrium Model of Sorting in an Urban Housing Market: The Causes and Consequences of Residential Segregation. No. 860. Center Discussion Paper, 2003.&lt;br /&gt;
+[11] Tita, George E., Tricia L. Petras, and Robert T. Greenbaum. “Crime and residential choice: a neighborhood level analysis of the impact of crime on housing prices.” Journal of quantitative criminology 22.4 (2006): 299.\ 
+[12] Lynch, Allen K., and David W. Rasmussen. “Measuring the impact of crime on house prices.” Applied Economics 33.15 (2001): 1981-1989.&lt;br /&gt;
+[13] Hellman, Daryl A., and Joel L. Naroff. “The impact of crime on urban residential property values.” Urban Studies 16.1 (1979): 105-112.&lt;br /&gt;
+[14] Gelman, Irit Askira, and Ningning Wu. “Combining structured and unstructured information sources for a study of data quality: a case study of Zillow. com.” hicss. IEEE, 1899.&lt;br /&gt;
+[15] Verma, Jai Prakash, Bankim Patel, and Atul Patel. “Big data analysis: recommendation system with Hadoop framework.” Computational Intelligence &amp;amp; Communication Technology (CICT), 2015 IEEE International Conference on. IEEE, 2015.&lt;br /&gt;
+[16] Manikrao, Umardand Shripad, and T. V. Prabhakar. “Dynamic selection of web services with recommendation system.” Next Generation Web Services Practices, 2005. NWeSP 2005. International Conference on. IEEE, 2005.&lt;br /&gt;
+[17] de Gemmis, Marco, et al. “Semantics-aware content-based recommender systems.” Recommender Systems Handbook. Springer, Boston, MA, 2015. 119-159.&lt;br /&gt;
+[18] Hurley, Gareth, and David C. Wilson. “DubLet: An Online CBR System for Rental Property Recommendation.” International Conference on Case-Based Reasoning. Springer, Berlin, Heidelberg, 2001.&lt;br /&gt;
+[19] Guy, Nicolas Nahimana. A Recommender system for rental properties. Diss. Strathmore University, 2017.&lt;br /&gt;
+[20] Kasamani, Bernard Shibwabo, and Guy Nahimana. “A System for Recommending Rental Properties.” Journal of Systems Integration 8.3 (2017): 10-18.\&lt;/p&gt;</content><author><name>boshengjian</name></author><category term="blog" /><category term="Data Visualization" /><category term="CSE6242" /><category term="Report" /><summary type="html">Summary</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://bsjian.github.io/Jekyll-Blog/assets/images/markdown.jpg" /></entry><entry><title type="html">Coping With NP-Completeness - Local Search</title><link href="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search/" rel="alternate" type="text/html" title="Coping With NP-Completeness - Local Search" /><published>2018-11-13T12:00:00-05:00</published><updated>2018-11-13T12:00:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
+
+&lt;p&gt;This post will introduce local search methods.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;
     &lt;ul&gt;
@@ -40,7 +489,7 @@ positions&lt;/li&gt;
   &lt;li&gt;use evaluation function to choose among neighboring positions&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/local_search_metaphor.png&quot; alt=&quot;LocalSearch&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/local_search_metaphor.png&quot; alt=&quot;LocalSearch&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;several-concepts&quot;&gt;Several Concepts&lt;/h3&gt;
 
@@ -77,7 +526,7 @@ solutions”)&lt;/li&gt;
 
 &lt;h4 id=&quot;tsp&quot;&gt;TSP&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/tsp_neighboring.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/tsp_neighboring.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Search Space: all permutations of the cities (each defines a cycle)
 3-opt – delete 3 edges and reconnect fragments into 1 cycle
@@ -89,8 +538,8 @@ k-opt – delete k edges and reconnect fragments into 1 cycle&lt;/p&gt;
 
 &lt;p&gt;Hill Climbing is basically choosing the neighbor with the largest improvement as the next state until a local optimal solution is reached. It’s very fast and works well for certain problems.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/hill_climbing.png&quot; alt=&quot;Screenshot&quot; /&gt;
-&lt;img src=&quot;/assets/images/blogs/coping/hill_climbing_algo.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/hill_climbing.png&quot; alt=&quot;Screenshot&quot; /&gt;
+&lt;img src=&quot;/assets/blogs/coping/hill_climbing_algo.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;However, this local search only finds the local optimization, which is not guaranteed to be the overall optimal solution, as there might be multiple hills. And it is prone to be misguided by evaluation/objective function.&lt;/p&gt;
 
@@ -118,7 +567,7 @@ allowed.&lt;/p&gt;
   &lt;li&gt;Start at another random position&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/random_hill_climbing.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/random_hill_climbing.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;the-walksat-algorithm&quot;&gt;The WalkSAT Algorithm&lt;/h3&gt;
 
@@ -164,193 +613,11 @@ Analogy:&lt;/li&gt;
   &lt;li&gt;Probability goes down with time (similar to temperature cooling&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/sa_algo.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/sa_algo.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Acceptance criterion (Metropolis condition): choose new solution s’ over old solution s with probability (maximization)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/sa_formula.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Initial temperature T0&lt;/li&gt;
-  &lt;li&gt;Annealing (cooling) schedule: how to update the
-temperature&lt;/li&gt;
-  &lt;li&gt;E.g. T = a T with a =0.95 (geometric schedule)&lt;/li&gt;
-  &lt;li&gt;Number of iterations at each temperature (e.g. multiple of the
-neighbourhood size)&lt;/li&gt;
-  &lt;li&gt;Stopping criterion&lt;/li&gt;
-  &lt;li&gt;E.g. no improved solution found for a number of iterations (or
-number of temperature values)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>boshengjian</name></author><category term="blog" /><category term="NP-Complete" /><category term="algorithms" /><category term="proof" /><category term="problems" /><summary type="html">Summary:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://bsjian.github.io/Jekyll-Blog/assets/images/markdown.jpg" /></entry><entry><title type="html">Coping With NP-Completeness - Local Search</title><link href="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search/" rel="alternate" type="text/html" title="Coping With NP-Completeness - Local Search" /><published>2018-11-13T12:00:00-05:00</published><updated>2018-11-13T12:00:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Coping-With-NPC-Local-Search/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
-
-&lt;p&gt;This post will introduce branch and bound method.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#search-process&quot;&gt;Search-Process&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#several-concepts&quot;&gt;Several-Concepts&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#tsp&quot;&gt;TSP&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#hill-climbing&quot;&gt;Hill-Climbing&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#stochastic-local-search&quot;&gt;Stochastic-Local-Search&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#random-restart-hill-climbing&quot;&gt;Random-restart-hill-climbing&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#the-walksat-algorithm&quot;&gt;The-WalkSAT-Algorithm&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#hill-climbing&quot;&gt;Simulated-Annealing&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;NP-Complete problems are very difficult and naive algorithms is typically of exponential run time complexity, which is very bad when the input is large.&lt;/p&gt;
-
-&lt;p&gt;For Combinatorial Optimization Problems (such as TSP, 0-1 Knapsack, Assignment problem, Bin packing problem, SAT, Eight queens puzzle, etc.), local search can quickly find a solution for which you cannot give any quality guarantee (but which might often be good in practice on real problem instances)&lt;/p&gt;
-
-&lt;h3 id=&quot;search-process&quot;&gt;Search Process&lt;/h3&gt;
-
-&lt;p&gt;Local Search can be generalized as:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;start from initial position&lt;/li&gt;
-  &lt;li&gt;iteratively move from current position to one of neighboring
-positions&lt;/li&gt;
-  &lt;li&gt;use evaluation function to choose among neighboring positions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/local_search_metaphor.png&quot; alt=&quot;LocalSearch&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;several-concepts&quot;&gt;Several Concepts&lt;/h3&gt;
-
-&lt;p&gt;Take SAT and TSP as examples, local search would be:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Search Space S:&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;SAT: set of all complete truth assignments to propositional variables (all “potential solutions”)&lt;/li&gt;
-      &lt;li&gt;TSP: set of all permutations of vertices (all “potential
-solutions”)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Solution Set S’⊆S:&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;SAT: all satisfying assignments for given formula&lt;/li&gt;
-      &lt;li&gt;TSP: the tours of minimum length&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Neighborhood Relation N(S)∈S :&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;A way to move from one potential solution to another&lt;/li&gt;
-      &lt;li&gt;SAT: neighboring variable assignments differ in the truth&lt;/li&gt;
-      &lt;li&gt;TSP: neighboring tour differ in several edges&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Evaluation Function g:&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;SAT: number of clauses satisfied under given assignment&lt;/li&gt;
-      &lt;li&gt;TSP: length of tour&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;tsp&quot;&gt;TSP&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/tsp_neighboring.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Search Space: all permutations of the cities (each defines a cycle)
-3-opt – delete 3 edges and reconnect fragments into 1 cycle
-k-opt – delete k edges and reconnect fragments into 1 cycle&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;hill-climbing&quot;&gt;Hill Climbing&lt;/h2&gt;
-
-&lt;p&gt;Hill Climbing is basically choosing the neighbor with the largest improvement as the next state until a local optimal solution is reached. It’s very fast and works well for certain problems.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/hill_climbing.png&quot; alt=&quot;Screenshot&quot; /&gt;
-&lt;img src=&quot;/assets/images/blogs/coping/hill_climbing_algo.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;However, this local search only finds the local optimization, which is not guaranteed to be the overall optimal solution, as there might be multiple hills. And it is prone to be misguided by evaluation/objective function.&lt;/p&gt;
-
-&lt;h2 id=&quot;stochastic-local-search&quot;&gt;Stochastic Local Search&lt;/h2&gt;
-
-&lt;p&gt;Hill Climbing is a Greedy Algorithm which search a local optimization.&lt;/p&gt;
-
-&lt;p&gt;Compared to Hill Climbing, Stochastic Local Search is that when we make our decisions, instead of choosing the neighbor with the largest improvement as the next state (go up), we not only randomize initialization step but also choose the next state &lt;strong&gt;randomly&lt;/strong&gt; such that suboptimal/worsening steps are
-allowed.&lt;/p&gt;
-
-&lt;p&gt;Simple SLS methods include :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Random Search (Blind Guessing): In each step, randomly select one element of the search space.&lt;/li&gt;
-  &lt;li&gt;(Uninformed) RandomWalk: In each step, randomly select one of the neighboring positions of the search space and move there.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;random-restart-hill-climbing&quot;&gt;Random restart hill climbing&lt;/h3&gt;
-
-&lt;p&gt;Steps:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Start at random solution&lt;/li&gt;
-  &lt;li&gt;Hill-climb until local optima&lt;/li&gt;
-  &lt;li&gt;Start at another random position&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/random_hill_climbing.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;the-walksat-algorithm&quot;&gt;The WalkSAT Algorithm&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;WalkSAT(CNF, max-tries, max-flips, p) {
-    for i ← 1 to max-tries do
-        solution = random truth assignment
-        for j ← 1 to max-flips do
-            if all clauses in CNF satisfied then
-                return solution
-            c ← random unsatisfied clause in CNF with probability p
-                flip a random variable in c
-            else
-                flip variable in c that maximizes number of satisfied clauses
-return failure
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;simulated-annealing&quot;&gt;Simulated Annealing&lt;/h2&gt;
-
-&lt;h3 id=&quot;sa-analogy&quot;&gt;SA Analogy&lt;/h3&gt;
-
-&lt;p&gt;Annealing is process of heating and cooling metals in order to
-improve strength&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Idea: Controlled heating and cooling of metal&lt;/li&gt;
-  &lt;li&gt;When hot, atoms move around&lt;/li&gt;
-  &lt;li&gt;When cooled, atoms find configuration with lower internal energy (i.e.
-makes metal stronger)
-Analogy:&lt;/li&gt;
-  &lt;li&gt;Temperature = probability of accepting worse neighboring solution&lt;/li&gt;
-  &lt;li&gt;When temperature is high, likely to accept worse neighboring solutions
-(but may lead to better overall solution)&lt;/li&gt;
-  &lt;li&gt;Analogous to atoms wandering around&lt;/li&gt;
-  &lt;li&gt;Cooling represents shrinking probability of accepting worse solutions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;sa-pseudo-code&quot;&gt;SA Pseudo code&lt;/h3&gt;
-
-&lt;p&gt;Select a neighbor at random.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;If better than current state, go there (improving move).&lt;/li&gt;
-  &lt;li&gt;Otherwise, go there with some probability (worsening move).&lt;/li&gt;
-  &lt;li&gt;Probability goes down with time (similar to temperature cooling&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/sa_algo.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Acceptance criterion (Metropolis condition): choose new solution s’ over old solution s with probability (maximization)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/sa_formula.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/sa_formula.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Initial temperature T0&lt;/li&gt;
@@ -382,11 +649,11 @@ number of temperature values)&lt;/li&gt;
 
 &lt;p&gt;Click apps and create a new App.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/projects/twitter-bot/click-app.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/projects/twitter-bot/click-app.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Get API Keys:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/projects/twitter-bot/api.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/projects/twitter-bot/api.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I also used &lt;a href=&quot;http://www.tweepy.org/&quot;&gt;Tweepy&lt;/a&gt; to access the Twitter API. Check out the docs &lt;a href=&quot;https://tweepy.readthedocs.io/en/v3.5.0/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
@@ -702,12 +969,12 @@ number of temperature values)&lt;/li&gt;
 
 &lt;h3 id=&quot;pseudo-code&quot;&gt;Pseudo Code&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/branch_algo.png&quot; alt=&quot;Pseudocode&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/branch_algo.png&quot; alt=&quot;Pseudocode&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;travelling-salesman-problem&quot;&gt;Travelling Salesman Problem&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Travelling_salesman_problem&quot;&gt;Travelling Salesman Problem (TSP)&lt;/a&gt;: Given a complete graph G=(V,E), a cost function w:E-&amp;gt;N, and an integer k, is there a cycle C going through each vertex once and only once, with ∑&lt;sub&gt;e∈C&lt;/sub&gt; w(e) ≤ k ?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/TSP.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/TSP.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Partial Solution (a, T, b): a path from a start node a to b, going through nodes T (same as HamCycle).&lt;/li&gt;
@@ -730,7 +997,7 @@ having a short TSP tour)&lt;/li&gt;
 
 &lt;h5 id=&quot;naive-bounding&quot;&gt;Naive Bounding&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/TSP_bound_1_1.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/TSP_bound_1_1.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Because a tour must leave every vertex exactly once, a lower bound on the length of a tour is the sum of the minimum cost of leaving every vertex.&lt;/p&gt;
 
@@ -744,10 +1011,10 @@ For a given edge (u, v), think of half of its weight as the exiting cost of u, a
 &lt;h5 id=&quot;reduced-cost-matrix&quot;&gt;Reduced Cost Matrix&lt;/h5&gt;
 
 &lt;p&gt;Step 1 to reduce: Search each row for the smallest value
-&lt;img src=&quot;/assets/images/blogs/coping/reduced_cost_row.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/blogs/coping/reduced_cost_row.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Step 2 to reduce: Search each column for the smallest value
-&lt;img src=&quot;/assets/images/blogs/coping/reduced_cost_col.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/blogs/coping/reduced_cost_col.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The total cost of 84+12=96 is subtracted. Thus, we know the lower bound
 of feasible solutions to this TSP problem is 96.&lt;/p&gt;
@@ -776,184 +1043,10 @@ exclude (b,c) -&amp;gt; (a, T, b) Yi(b,c) , include(b,d) or exclude(b,d)&lt;/p&g
 
 &lt;p&gt;Consider Reduced Cost Matrix, if we take the edge (4,6), Lower Bound won’t change; if not taking that edge, add 32 to our Lower Bound.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/TSP_decision_tree.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/TSP_decision_tree.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;High-Level State-Space Tree&lt;/center&gt;
 
-&lt;p&gt;Then, again reduce the current matrix by one row and one column to get the current Lower Bound. Set the cost (6,4) to infinity (so that we ‘re not going back to 4).&lt;/p&gt;</content><author><name>boshengjian</name></author><category term="blog" /><category term="NP-Complete" /><category term="algorithms" /><category term="proof" /><category term="problems" /><summary type="html">Summary:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://bsjian.github.io/Jekyll-Blog/assets/images/markdown.jpg" /></entry><entry><title type="html">Housing Recommendation System - Progress Report</title><link href="https://bsjian.github.io/Jekyll-Blog/Housing-Recommendation-System-Progress-Report/" rel="alternate" type="text/html" title="Housing Recommendation System - Progress Report" /><published>2018-11-01T23:18:00-04:00</published><updated>2018-11-01T23:18:00-04:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Housing-Recommendation-System-Progress-Report</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Housing-Recommendation-System-Progress-Report/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;See the PDF version &lt;a href=&quot;https://drive.google.com/file/d/1viFWu8ctGKZJ1f2qpPUF07AvfS8P--Jf/view?usp=sharing&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is the progress report for CSE6242 Data and Visual Analytics.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#introduction-and-problem-definition&quot;&gt;Introduction-and-Problem-Definition&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#literature-review&quot;&gt;Literature-Review&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#proposed-methods&quot;&gt;Proposed Methods&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#evaluation&quot;&gt;Evaluation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#conclusion&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#reference&quot;&gt;Reference&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;introduction-and-problem-definition&quot;&gt;Introduction and Problem Definition&lt;/h2&gt;
-
-&lt;p&gt;Nowadays, more than 90 percent people use web recommendation systems to buy or sell their real estates [1,2]. There are plenty of platforms which integrate the real estate data and present them in one website, like Google, Yelp, Zillow [3].&lt;/p&gt;
-
-&lt;p&gt;However, none of these current systems is designed for meeting all needs of college students and daily commuters in one place. Those people, when looking for housing, need to search among lots of different websites to gain information they need. For example, one might need to search for houses on Zillow, then move to Google maps for transit time and then look up reviews of leasing offices or agencies. Furthermore, one might have additional preferences such as shopping location, favorite store and dog parks.&lt;/p&gt;
-
-&lt;p&gt;So we want to build a housing rental recommendation website for those who commutes daily, which can provide renting recommendations based on users’ personal references, such as basic information, safety anticipation, and transportation requirement.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;literature-review&quot;&gt;Literature Review&lt;/h2&gt;
-
-&lt;p&gt;Those factors are of concern when people search for housing : location, type, rent price, number of bedrooms, number of bathrooms, the area of living space, availability of parking space, whether they are furnished or serviced and the daily commuting distance and time. Many researches have been done to analyze the relationship between transportation and other metrics based on renters’ choices of renting [4,5,6,7]. Researches also show that the renters’ choices are also highly related with their occupations. Those researches show how we may improve our project in the future, which is using the date came from our own website to build model and improve the recommendation system.&lt;/p&gt;
-
-&lt;p&gt;At the same time, crime rate is also important in residential decision. Researchers found out that people are willing to pay more to move to a location with lower violent crime occurrences [8,10]. Also, crime rate and house price are innately correlated. George et al used instrumental variable (IV) method and concluded that every 10% decrease in burglaries rate would result an average 1% rise in land price in Japan [11]. As for crime types, researchers have differentiated property crime and violent crime, and quantify the ‘‘intangible cost’’  by using hedonic regression [12,13,14]. The results suggests that violent crime is the dominant factor affecting house prices. Thus we aim to only focus on violent crimes in Atlanta.&lt;/p&gt;
-
-&lt;p&gt;Our system uses multiple datasets from different sources, including user input data and verified or unverified public datasets. Gelman et al points out that plenty of information input by end-users are inaccurate [14]. The author uses data event analysis and error cluster analysis for investigating errors. Data event analysis involves a review of all the processes that capture or manipulate the data and error cluster analysis centers on a data subset that contains data suspected of being incorrect. We plan to use similar methods to verify inaccurate data and clean inaccurate data
-.
-As for recommendation system, Verma et al built a recommendation system with Hadoop and utilizes recommendation algorithms in Mahout Architecture [15]. To solve natural language ambiguity, Manikrao et al proposed a classification of semantic approaches into top-down and bottom-up, rely on the integration of external knowledge sources and a lightweight semantic representation based on the hypothesis [17]. To build an semantic recommendation system, we can add a semantic matcher to match semantic documents from web service users [16]. Thus we plan to try similar recommendation system framework as to construct an online semantic content-based recommendation system.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;proposed-methods&quot;&gt;Proposed Methods&lt;/h2&gt;
-
-&lt;h3 id=&quot;data-collection-and-refining&quot;&gt;Data Collection and Refining&lt;/h3&gt;
-
-&lt;h4 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h4&gt;
-
-&lt;p&gt;There are several datasets we are using including Yelp dataset, Zillow dataset, as well as Atlanta crime dataset.&lt;/p&gt;
-
-&lt;p&gt;For Yelp dataset, we use Python scraping to access and download each apartment’s basic information, like the location, zip code, customer review, ranking, score and so on. Since continuously craping Yelp can result being banned by IP, we decide to “scrape as we need” like doing search automatically for users.&lt;/p&gt;
-
-&lt;p&gt;For Zillow dataset, we are not able to use scraping to access the dataset, since Zillow has its anti-crawl system. Hence, Zillow api are applying to retrieve data from Zillow data. The main information include location, ranking, price, house type, public infrastructure, entertainments, pet, parking lot, washer as well as the ranking.&lt;/p&gt;
-
-&lt;p&gt;For Atlanta crime dataset, the dataset will include all the up-to-date information about crimes happened from 2009-2018. The dataset include crime type, location, time and neighborhood.&lt;/p&gt;
-
-&lt;p&gt;In order to combine the information about locations in all datasets, we are going to use Google Map API to retrieve the latitude and longitude. 
-The sample raw dataset are shown below, which should be cleaned and collected afterwords.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/cse6242_progress/figure1.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;Figure.1 Sample Crime Raw Dataset&lt;/center&gt;
-
-&lt;h4 id=&quot;data-refining&quot;&gt;Data Refining&lt;/h4&gt;
-
-&lt;p&gt;We use Zillow’s dataset to get apartments’ basic information, at the same time we use the scores in Yelp as an additional feature, but for some specific apartments in Zillow we can’t find corresponding scores in Yelp. Thus we propose two ways to solve this data missing problem.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Average Interpolation:
-For those score missing apartments, we use the average scores in the whole     Yelp dataset as the value of missing scores.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Logistic Regression Model Prediction:
-Based on Yelp dataset and corresponding information in Zillow dataset, we train a Logistic Regression model. Then based on this trained model, we use the information of score missing apartments in Zillow dataset as inputs and get the predicted scores.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Regression Tree Model Prediction:
-Based on Yelp dataset and corresponding information in Zillow dataset, we train a Regression Tree model. Then based on this trained model, we use the information of score missing apartments in Zillow dataset as inputs and get the predicted scores.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;multi-feature-filtering&quot;&gt;Multi-feature Filtering&lt;/h3&gt;
-&lt;p&gt;Based on basic information that user choose we use Zillow’s dataset to filter 30 candidate apartments, the first has initial score of 30 and the last has initial score of 1.&lt;/p&gt;
-
-&lt;p&gt;For feature transportation, crime rates and scores from Yelp, we set corresponding weights.&lt;/p&gt;
-
-&lt;p&gt;Compute the final score of each candidate apartments based on initial scores and additional features scores .&lt;/p&gt;
-
-&lt;p&gt;Based on this final scores, show the top 10 apartments with basic information on the website for user to choose.&lt;/p&gt;
-
-&lt;h3 id=&quot;user-interactive-and-visualization&quot;&gt;User Interactive and Visualization&lt;/h3&gt;
-
-&lt;h4 id=&quot;what-interface-and-their-goals&quot;&gt;What Interface and their goals&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;A welcome Interface: This page includes an introduction of our project and a simple tutorial about how to use it. It aims to help the users begin their first try on our recommendation system.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Search-filter Interface: This page has 4 sections. The Basic Information section contains checkboxes, drop down menus and range sliders which enables users to customize their preference on price range, number of beds and baths, pets policy, parking, etc. The Safety Requirement section contains two range sliders where users weigh their concern from 1 to 10 to violent crimes and property crimes. The Transportation Information section contains a search box where user can locate their place of work/ study (where they have to commute from home), a form where users input their prefered distance/ time of commuting and whether they walk or drive to commute. The Review Section enables users to select from 1 to 5 stars based on Yelp’s reviews thus serves to filter the recommendation results.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Result Interface: A page shows a map with our recommended rental position ordered by rank. In this page, users are able to scroll around the map and tap their interested positions to look for detail information and why we recommend it. Other basic map operations such as zoom in and out are also allowed.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;how-to-build-the-interface-tools&quot;&gt;How to build the interface (Tools)&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;HTML5, CSS3 and JavaScipt: In general, our website can be divided into two main functional parts. The first one is obtaining filter options from users and the second is display our result in map. The fundamental tools we use are HTML5 with CSS3 and Javascript. Meanwhile, some powerful library in Javascript like React are used to help us build the website.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;React (Search-filter Interface):  After visiting the welcome page, a page with result map and user preference options module will be displayed. For our search filter options, we consider Reactivesearch a wonderful Javascript library to realize it. Reactivesearch contains various pre-built module for filter section in map search, which is very efficient and convenient. For the actual display of map, we use Reactivemap library which contains interactive component for map display.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;final-effect&quot;&gt;Final Effect&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/cse6242_progress/welcome.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;Figure.2 Welcome Page&lt;/center&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/cse6242_progress/search.jpg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;Figure.3 Search Page&lt;/center&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h2&gt;
-
-&lt;p&gt;For our recommendation system, we mainly want to add more features compared to existing recommendation service to satisfy users’ safety anticipation and transportation requirement. Therefore, our primary evaluation criteria are users’ feedback and user satisfactory. Designed survey would be sent out to our test users and based on these feedback, a user oriented evaluation can be made to our recommendation website. The survey will be a blind test. The user will not know if the recommandation is from our system or other existing solutions so that we can compare the feedback to see whether or not our recommendation is better than others.&lt;/p&gt;
-
-&lt;p&gt;The survey will also include the feedback on our website design - appearance, usability, cleanness and so on - as a evaluation of our user-end design.&lt;/p&gt;
-
-&lt;p&gt;Also, since user experience is one of the top concern of a recommendation website, our website needs to give back results as quick as possible to limit the user’s waiting time. Given that our website needs to handle data from different sources and even with “real-time” scraping, efficiency of our codes are essential. We want to have our website generates searching and ranking results within 2 seconds based on our server’s computation resource. This time limit will be our most important evaluation for program efficiency and user experience.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;In this project, we are going to build  a housing rental recommendation website, especially for off-campus living students and daily commuters who have their special needs. This design will definitely contribute tremendous value in giving people a easy life. The project’s  main innovation are listed below.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;This project innovatively comes up with the idea to design a housing rental recommendation website especially for off-campus students and commuters.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Multiple datasets like Yelp, Zillow, Crime datasets are used to construct multi-feature filtings.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The user interactive interface and visualization are going to be built.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;p&gt;[1] National Association of Realtors. Home Buyer and Seller Generational Trends Report 2017. National Association of Realtors, 2017.&lt;br /&gt;
-[2] National Association of Realtors. Real Estate in a Digital Age Report 2017. National Association of Realtors, 2017.&lt;br /&gt;
-[3] Fang, Yao-Min, et al. “An integrated information system for real estate agency-based on service-oriented architecture.” Expert systems with applications 36.8 (2009): 11039-11044.&lt;br /&gt;
-[4] Weisbrod, Glen, Steven R. Lerman, and Moshe Ben-Akiva. “Tradeoffs in residential location decisions: Transportation versus other factors.” Transport Policy and Decision Making1.1 (1980): 13-26.&lt;br /&gt;
-[5] Bina, Michelle, Valdemar Warburg, and Kara Kockelman. “Location choice vis-à-vis transportation: Apartment dwellers.” Transportation Research Record: Journal of the Transportation Research Board 1977 (2006): 93-102.&lt;br /&gt;
-[6] Mathur, Shishir. “Impact of transportation and other jurisdictional-level infrastructure and services on housing prices.” Journal of Urban Planning and Development 134.1 (2008): 32-41.&lt;br /&gt;
-[7] Frenkel, Amnon, Edward Bendit, and Sigal Kaplan. “Residential location choice of knowledge-workers: The role of amenities, workplace and lifestyle.” Cities 35 (2013): 33-41.&lt;br /&gt;
-[8] Kutsuzawa, Ryuji, et al. The impact of crime on housing land prices and the effects of police boxes and voluntary groups on crime prevention in Japan. No. 60. 2010.&lt;br /&gt;
-[9] Zhang, Zhaohua, and Diane Hite. “House Value, Crime and Residential Location Choice.” 2015 Annual Meeting, January 31-February 3, 2015, Atlanta, Georgia. No. 196826. Southern Agricultural Economics Association, 2015.&lt;br /&gt;
-[10] Bayer, Patrick, Robert McMillan, and Kim Rueben. An Equilibrium Model of Sorting in an Urban Housing Market: The Causes and Consequences of Residential Segregation. No. 860. Center Discussion Paper, 2003.&lt;br /&gt;
-[11] Tita, George E., Tricia L. Petras, and Robert T. Greenbaum. “Crime and residential choice: a neighborhood level analysis of the impact of crime on housing prices.” Journal of quantitative criminology 22.4 (2006): 299.\ 
-[12] Lynch, Allen K., and David W. Rasmussen. “Measuring the impact of crime on house prices.” Applied Economics 33.15 (2001): 1981-1989.&lt;br /&gt;
-[13] Hellman, Daryl A., and Joel L. Naroff. “The impact of crime on urban residential property values.” Urban Studies 16.1 (1979): 105-112.&lt;br /&gt;
-[14] Gelman, Irit Askira, and Ningning Wu. “Combining structured and unstructured information sources for a study of data quality: a case study of Zillow. com.” hicss. IEEE, 1899.&lt;br /&gt;
-[15] Verma, Jai Prakash, Bankim Patel, and Atul Patel. “Big data analysis: recommendation system with Hadoop framework.” Computational Intelligence &amp;amp; Communication Technology (CICT), 2015 IEEE International Conference on. IEEE, 2015.&lt;br /&gt;
-[16] Manikrao, Umardand Shripad, and T. V. Prabhakar. “Dynamic selection of web services with recommendation system.” Next Generation Web Services Practices, 2005. NWeSP 2005. International Conference on. IEEE, 2005.&lt;br /&gt;
-[17] de Gemmis, Marco, et al. “Semantics-aware content-based recommender systems.” Recommender Systems Handbook. Springer, Boston, MA, 2015. 119-159.&lt;br /&gt;
-[18] Hurley, Gareth, and David C. Wilson. “DubLet: An Online CBR System for Rental Property Recommendation.” International Conference on Case-Based Reasoning. Springer, Berlin, Heidelberg, 2001.&lt;br /&gt;
-[19] Guy, Nicolas Nahimana. A Recommender system for rental properties. Diss. Strathmore University, 2017.&lt;br /&gt;
-[20] Kasamani, Bernard Shibwabo, and Guy Nahimana. “A System for Recommending Rental Properties.” Journal of Systems Integration 8.3 (2017): 10-18.\&lt;/p&gt;</content><author><name>boshengjian</name></author><category term="blog" /><category term="Data Visualization" /><category term="CSE6242" /><summary type="html">Summary</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://bsjian.github.io/Jekyll-Blog/assets/images/markdown.jpg" /></entry><entry><title type="html">P, NP and NP-Complete</title><link href="https://bsjian.github.io/Jekyll-Blog/P-NP-and-NPC/" rel="alternate" type="text/html" title="P, NP and NP-Complete" /><published>2018-09-25T23:18:00-04:00</published><updated>2018-09-25T23:18:00-04:00</updated><id>https://bsjian.github.io/Jekyll-Blog/P-NP-and-NPC</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/P-NP-and-NPC/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Then, again reduce the current matrix by one row and one column to get the current Lower Bound. Set the cost (6,4) to infinity (so that we ‘re not going back to 4).&lt;/p&gt;</content><author><name>boshengjian</name></author><category term="blog" /><category term="NP-Complete" /><category term="algorithms" /><category term="proof" /><category term="problems" /><summary type="html">Summary:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://bsjian.github.io/Jekyll-Blog/assets/images/markdown.jpg" /></entry><entry><title type="html">P, NP and NP-Complete</title><link href="https://bsjian.github.io/Jekyll-Blog/P-NP-and-NPC/" rel="alternate" type="text/html" title="P, NP and NP-Complete" /><published>2018-09-25T23:18:00-04:00</published><updated>2018-09-25T23:18:00-04:00</updated><id>https://bsjian.github.io/Jekyll-Blog/P-NP-and-NPC</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/P-NP-and-NPC/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Computers are designed to compute. And they are built to help people solve problems.&lt;/p&gt;
 
@@ -975,9 +1068,9 @@ Based on Yelp dataset and corresponding information in Zillow dataset, we train 
 
 &lt;p&gt;Among all the problems, the easiest ones are called P problems, which can be solved in polynomial time. &lt;a href=&quot;https://en.wikipedia.org/wiki/P_(complexity)&quot;&gt;Wikipedia&lt;/a&gt; defines P problems as “all decision problems can be solved by a deterministic Turing machine using a polynomial amount of computation time, or polynomial time”.&lt;/p&gt;
 
-&lt;p&gt;Famous P problem: &lt;a href=&quot;https://en.wikipedia.org/wiki/Travelling_salesman_problem&quot;&gt;Travelling Salesman Problem (TSP)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Famous NP problem: &lt;a href=&quot;https://en.wikipedia.org/wiki/Travelling_salesman_problem&quot;&gt;Travelling Salesman Problem (TSP)&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/P_NP_NPC/TSP.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/P_NP_NPC/TSP.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;For each two cities, an integer cost is given to travel from one of the
 two cities to the other. The salesperson wants to make a minimum
@@ -1009,7 +1102,7 @@ polynomial time&lt;/li&gt;
   &lt;li&gt;X is polynomial reducible to Y can be written as &lt;strong&gt;X &amp;lt;=&lt;sub&gt;p&lt;/sub&gt; Y&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/P_NP_NPC/reduction.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/P_NP_NPC/reduction.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1021,7 +1114,7 @@ polynomial time&lt;/li&gt;
 
 &lt;p&gt;The difference between NP-Hard and NP-Complete is that for NP-Hard, it’s difficult to verify the candidate solution in polynomial time or it cannot be verified in polynomial time, thus NP-Hard includes NP-Complete. These are some problems which in NP-Hard are not NP-Complete, e.g. &lt;a href=&quot;https://en.wikipedia.org/wiki/Halting_problem&quot;&gt;Halting Problem&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/P_NP_NPC/P_np_np-complete_np-hard.svg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/P_NP_NPC/P_np_np-complete_np-hard.svg&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1034,7 +1127,7 @@ polynomial time&lt;/li&gt;
   &lt;li&gt;Step 3. Prove that X &amp;lt;= &lt;sub&gt;p&lt;/sub&gt; Y (poly-time reduction).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/P_NP_NPC/problems.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/P_NP_NPC/problems.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;How NP-C problems are discovered&lt;/center&gt;
 
 &lt;p&gt;Here is a &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_NP-complete_problems&quot;&gt;list&lt;/a&gt; of NP-Complete problems.&lt;/p&gt;</content><author><name>boshengjian</name></author><category term="blog" /><category term="NP-Complete" /><category term="proof" /><category term="algorithms" /><category term="problems" /><summary type="html">Summary</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://bsjian.github.io/Jekyll-Blog/assets/images/markdown.jpg" /></entry><entry><title type="html">D3: HeatMap, Interactive Graph and Choropleth Map</title><link href="https://bsjian.github.io/Jekyll-Blog/D3-Warm-Up/" rel="alternate" type="text/html" title="D3: HeatMap, Interactive Graph and Choropleth Map" /><published>2018-09-13T10:33:00-04:00</published><updated>2018-09-13T10:33:00-04:00</updated><id>https://bsjian.github.io/Jekyll-Blog/D3-Warm-Up</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/D3-Warm-Up/">&lt;h2 id=&quot;force-directed-graph-layout&quot;&gt;Force-directed graph layout&lt;/h2&gt;
@@ -1070,7 +1163,7 @@ polynomial time&lt;/li&gt;
 
 &lt;p&gt;When hovering the mouse over a bar, a smaller line chart representing the population growth of that city for each year (2013-2017) should be displayed in the top right corner. For example, Los Angeles has a growth value of 0.84%, 0.79%, 0.78%, 0.70%, 0.47% for the years 2013, 2014, 2015, 2016 and 2017 respectively. On hovering over the bar representing Los Angeles, a line chart depicting these 5 values in % is displayed.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/projects/d3_warm_up/interactive.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/projects/d3_warm_up/interactive.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p data-height=&quot;650&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;eQNVOa&quot; data-default-tab=&quot;result&quot; data-user=&quot;bsjian&quot; data-pen-title=&quot;CSE6242 HW2 Q5&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/bsjian/pen/eQNVOa/&quot;&gt;CSE6242 HW2 Q5&lt;/a&gt; by Bosheng Jian (&lt;a href=&quot;https://codepen.io/bsjian&quot;&gt;@bsjian&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async=&quot;&quot; src=&quot;https://static.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
@@ -1160,7 +1253,7 @@ if there is no such option, it backtracks one more level up the tree, and so on.
 
 &lt;h3 id=&quot;pseudo-code&quot;&gt;Pseudo-code&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blogs/coping/branch_algo.png&quot; alt=&quot;Pseudocode&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogs/coping/branch_algo.png&quot; alt=&quot;Pseudocode&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(X,Y) associated with each node, where X is a partial solution, and Y is the remaining subproblem.&lt;/p&gt;
 
@@ -1554,28 +1647,28 @@ Output:
 
 &lt;h2 id=&quot;welcoming-page&quot;&gt;Welcoming Page&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/projects/gallery/welcome.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/projects/gallery/welcome.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;sign-up-log-in&quot;&gt;Sign Up/ Log In&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/projects/gallery/register.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/projects/gallery/register.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/projects/gallery/login.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/projects/gallery/login.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;googlemaps-api&quot;&gt;GoogleMaps API&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/projects/gallery/map.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/projects/gallery/map.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;cloudinary&quot;&gt;Cloudinary&lt;/h2&gt;
 
 &lt;p&gt;All photos are stored in Cloudinary&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/projects/gallery/cloud.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/projects/gallery/cloud.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can add/edit your comments
-    &lt;img src=&quot;/assets/images/projects/gallery/camp_datail.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+    &lt;img src=&quot;/assets/projects/gallery/camp_datail.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>boshengjian</name></author><category term="project" /><category term="website" /><category term="full stack" /><category term="MangoDB" /><category term="Express.js" /><category term="Node.js" /><category term="Cloudinary" /><summary type="html">Bosheng’s Photo Gallery is my personal Gallery enbaled built with MongoDB, Express.js and Node.js. Check it out here.</summary></entry><entry><title type="html">:cloud: Bather: Chrome Weather Forecast Plug-in</title><link href="https://bsjian.github.io/Jekyll-Blog/Bather/" rel="alternate" type="text/html" title=":cloud: Bather: Chrome Weather Forecast Plug-in" /><published>2018-07-01T19:04:00-04:00</published><updated>2018-07-01T19:04:00-04:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Bather</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Bather/">&lt;p&gt;&lt;img src=&quot;/assets/images/projects/bather/atlanta.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>boshengjian</name></author><category term="project" /><category term="website" /><category term="full stack" /><category term="MangoDB" /><category term="Express.js" /><category term="Node.js" /><category term="Cloudinary" /><summary type="html">Bosheng’s Photo Gallery is my personal Gallery enbaled built with MongoDB, Express.js and Node.js. Check it out here.</summary></entry><entry><title type="html">:cloud: Bather: Chrome Weather Forecast Plug-in</title><link href="https://bsjian.github.io/Jekyll-Blog/Bather/" rel="alternate" type="text/html" title=":cloud: Bather: Chrome Weather Forecast Plug-in" /><published>2018-07-01T19:04:00-04:00</published><updated>2018-07-01T19:04:00-04:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Bather</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Bather/">&lt;p&gt;&lt;img src=&quot;/assets/projects/bather/atlanta.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bather is a weather forecast Chrome Extension, who gets weather information from OpenWeatherMap’s API.&lt;/p&gt;
 
@@ -1586,9 +1679,9 @@ Output:
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;You Can Search your Location
-  &lt;img src=&quot;/assets/images/projects/bather/change_location.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+  &lt;img src=&quot;/assets/projects/bather/change_location.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;img src=&quot;/assets/images/projects/bather/search.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/projects/bather/search.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
