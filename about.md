@@ -32,7 +32,8 @@ layout: page
 <h2>Projects</h2>
 
 <ul>
+	<li><a href="https://afternoon-citadel-68589.herokuapp.com/">Bosheng's Photo Gallery</a></li>
+	<li><a href="https://cse6242-224423.appspot.com/">Rental Recommendation System for Commuters</a></li>
 	<li><a href="https://radiant-headland-94269.herokuapp.com/">Yelp Camp</a></li>
 	<li><a href="https://chrome.google.com/webstore/detail/bather/ldbpocnepgdgpipohgbfimmniinkdmcb">Bather</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
 </ul>
