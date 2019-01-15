@@ -19,7 +19,7 @@ See the PDF version [here](https://drive.google.com/file/d/1GATi0CzKwm3YkMevMGeo
 
 See the code on [Github](https://github.com/bsjian/CSE6242-Team-Aha-Project), and the explanition [here](http://www.boshengjian.com/CSE-6242-Team-Aha-Project/)
 
-Check out the [demo](https://cse6242-224423.appspot.com/)
+Check out the [demo](https://afternoon-citadel-68589.herokuapp.com/)
 
 This is the final report for CSE6242 Data and Visual Analytics.
 

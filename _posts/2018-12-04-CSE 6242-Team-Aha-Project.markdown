@@ -47,9 +47,9 @@ our website can be divided into two main functional parts. The first one is obta
 
 See the code on Github: [https://github.com/bsjian/CSE6242-Team-Aha-Project](https://github.com/bsjian/CSE6242-Team-Aha-Project)
 
-Check out the [demo](https://cse6242-224423.appspot.com/)
+Check out the [demo](https://afternoon-citadel-68589.herokuapp.com/)
 
-<iframe src="https://cse6242-224423.appspot.com/" width="100%" height="800">
+<iframe src="https://afternoon-citadel-68589.herokuapp.com/" width="100%" height="800">
   <p>Your browser does not support iframes.</p>
 </iframe>
 
@@ -150,7 +150,7 @@ To execute the project's backend, first fill in your Google API key in line 5 of
 
 ### Live Demo
 
-To see the app, go to [https://cse6242-224423.appspot.com/](https://cse6242-224423.appspot.com/)
+To see the app, go to [https://afternoon-citadel-68589.herokuapp.com/](https://afternoon-citadel-68589.herokuapp.com/)
 
 ### Features
 

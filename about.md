@@ -13,27 +13,23 @@ layout: page
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>HTML - Jade - Haml - Erb</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
+	<li>HTML/CSS</li>
 	<li>Javascript (Design Patterns, Testes)</li>
 	<li>NodeJS</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
+	<li>ReactJS</li>
 	<li>Git</li>
-	<li>PHP</li>
 	<li>Python</li>
+	<li>Java</li>
 	<li>MySQL - MongoDB</li>
 	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
 </ul>
 
 <h2>Projects</h2>
 
 <ul>
+	<li><a href="https://play.google.com/store/apps/details?id=com.boshengjian.teaspill/">Tea Spill - WhatsApp Clone</a></li>
 	<li><a href="https://afternoon-citadel-68589.herokuapp.com/">Bosheng's Photo Gallery</a></li>
-	<li><a href="https://cse6242-224423.appspot.com/">Rental Recommendation System for Commuters</a></li>
+	<li><a href="https://limitless-shelf-79345.herokuapp.com/">Rental Recommendation System for Commuters</a></li>
 	<li><a href="https://radiant-headland-94269.herokuapp.com/">Yelp Camp</a></li>
-	<li><a href="https://chrome.google.com/webstore/detail/bather/ldbpocnepgdgpipohgbfimmniinkdmcb">Bather</a></li>
+	<li><a href="https://chrome.google.com/webstore/detail/bather/ldbpocnepgdgpipohgbfimmniinkdmcb">Bather - Weather Forcast Chrome Extension</a></li>
 </ul>
