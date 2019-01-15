@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://bsjian.github.io/Jekyll-Blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bsjian.github.io/Jekyll-Blog/" rel="alternate" type="text/html" /><updated>2018-12-24T17:26:43-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/</id><title type="html">Bosheng Jian</title><subtitle>My blog where I upload boring stuff</subtitle><entry><title type="html">:video_game: Game Development - Box Shooter</title><link href="https://bsjian.github.io/Jekyll-Blog/Unity-Box-Shooter/" rel="alternate" type="text/html" title=" :video_game: Game Development - Box Shooter" /><published>2018-12-20T17:04:00-05:00</published><updated>2018-12-20T17:04:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Unity-Box-Shooter</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Unity-Box-Shooter/">&lt;h2 id=&quot;project-requirements&quot;&gt;Project Requirements&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://bsjian.github.io/Jekyll-Blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bsjian.github.io/Jekyll-Blog/" rel="alternate" type="text/html" /><updated>2019-01-15T16:38:02-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/</id><title type="html">Bosheng Jian</title><subtitle>My blog where I upload boring stuff</subtitle><entry><title type="html">:video_game: Game Development - Box Shooter</title><link href="https://bsjian.github.io/Jekyll-Blog/Unity-Box-Shooter/" rel="alternate" type="text/html" title=" :video_game: Game Development - Box Shooter" /><published>2018-12-20T17:04:00-05:00</published><updated>2018-12-20T17:04:00-05:00</updated><id>https://bsjian.github.io/Jekyll-Blog/Unity-Box-Shooter</id><content type="html" xml:base="https://bsjian.github.io/Jekyll-Blog/Unity-Box-Shooter/">&lt;h2 id=&quot;project-requirements&quot;&gt;Project Requirements&lt;/h2&gt;
 
 &lt;p&gt;https://www.coursera.org/learn/game-development/peer/txouO/box-shooter-project-peer-review&lt;/p&gt;
 
@@ -240,9 +240,9 @@
 
 &lt;p&gt;See the code on Github: &lt;a href=&quot;https://github.com/bsjian/CSE6242-Team-Aha-Project&quot;&gt;https://github.com/bsjian/CSE6242-Team-Aha-Project&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://cse6242-224423.appspot.com/&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;https://afternoon-citadel-68589.herokuapp.com/&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
 
-&lt;iframe src=&quot;https://cse6242-224423.appspot.com/&quot; width=&quot;100%&quot; height=&quot;800&quot;&gt;
+&lt;iframe src=&quot;https://afternoon-citadel-68589.herokuapp.com/&quot; width=&quot;100%&quot; height=&quot;800&quot;&gt;
   &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
 &lt;/iframe&gt;
 
@@ -347,7 +347,7 @@ $ python price_as_feature.py -help
 
 &lt;h3 id=&quot;live-demo&quot;&gt;Live Demo&lt;/h3&gt;
 
-&lt;p&gt;To see the app, go to &lt;a href=&quot;https://cse6242-224423.appspot.com/&quot;&gt;https://cse6242-224423.appspot.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To see the app, go to &lt;a href=&quot;https://afternoon-citadel-68589.herokuapp.com/&quot;&gt;https://afternoon-citadel-68589.herokuapp.com/&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
 
@@ -399,7 +399,7 @@ $ python price_as_feature.py -help
 
 &lt;p&gt;See the code on &lt;a href=&quot;https://github.com/bsjian/CSE6242-Team-Aha-Project&quot;&gt;Github&lt;/a&gt;, and the explanition &lt;a href=&quot;http://www.boshengjian.com/CSE-6242-Team-Aha-Project/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://cse6242-224423.appspot.com/&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;https://afternoon-citadel-68589.herokuapp.com/&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;This is the final report for CSE6242 Data and Visual Analytics.&lt;/p&gt;
 
