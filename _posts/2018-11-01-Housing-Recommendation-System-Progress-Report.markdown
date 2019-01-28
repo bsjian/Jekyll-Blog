@@ -151,7 +151,7 @@ rendered our recommendations into the map.
 
 #### Final Effect
 
-![Screenshot](/assets/blogs/cse6242_report/welcome.jpg)
+<img src="/assets/blogs/cse6242_report/welcome.jpg" alt="drawing" width="auto"/>
 <center>Figure.2 Welcome Page</center>
 
 ![Screenshot](/assets/blogs/cse6242_report/search.jpg)
@@ -200,7 +200,7 @@ Below are the answers we got from our survey for testing users:
 ![Screenshot](/assets/blogs/cse6242_report/f6.jpg)
 <center>Figure.6 Satisfaction for Recommendation</center>
 
-![Screenshot](/assets/blogs/cse6242_report/f7.png)
+<img src="/assets/blogs/cse6242_report/f7.png" alt="drawing" width="760"/>
 <center>Figure.7 Satisfaction for Interface</center>
 
 ![Screenshot](/assets/blogs/cse6242_report/f8.jpg)

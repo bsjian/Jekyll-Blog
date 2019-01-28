@@ -44,7 +44,8 @@ Local Search can be generalized as:
 positions
 - use evaluation function to choose among neighboring positions
 
-![LocalSearch](/assets/blogs/coping/local_search_metaphor.png)
+<center><img src="/assets/blogs/coping/local_search_metaphor.png" alt="drawing"/></center>
+
 
 ### Several Concepts
 
@@ -67,7 +68,7 @@ solutions”)
 
 #### TSP 
 
-![Screenshot](/assets/blogs/coping/tsp_neighboring.png)
+<center><img src="/assets/blogs/coping/tsp_neighboring.png" alt="drawing"/></center>
 
 Search Space: all permutations of the cities (each defines a cycle)
 3-opt – delete 3 edges and reconnect fragments into 1 cycle
@@ -80,8 +81,10 @@ k-opt – delete k edges and reconnect fragments into 1 cycle
 
 Hill Climbing is basically choosing the neighbor with the largest improvement as the next state until a local optimal solution is reached. It's very fast and works well for certain problems.
 
-![Screenshot](/assets/blogs/coping/hill_climbing.png)
-![Screenshot](/assets/blogs/coping/hill_climbing_algo.png)
+<center><img src="/assets/blogs/coping/hill_climbing.png" alt="drawing"/></center>
+<center><img src="/assets/blogs/coping/hill_climbing_algo.png" alt="drawing"/></center>
+
+
 
 However, this local search only finds the local optimization, which is not guaranteed to be the overall optimal solution, as there might be multiple hills. And it is prone to be misguided by evaluation/objective function.
 
@@ -106,7 +109,8 @@ Steps:
 - Hill-climb until local optima
 - Start at another random position
 
-![Screenshot](/assets/blogs/coping/random_hill_climbing.png)
+<center><img src="/assets/blogs/coping/random_hill_climbing.png" alt="drawing"/></center>
+
 
 ### The WalkSAT Algorithm
 
@@ -150,11 +154,11 @@ Select a neighbor at random.
 - Otherwise, go there with some probability (worsening move).
 - Probability goes down with time (similar to temperature cooling
 
-![Screenshot](/assets/blogs/coping/sa_algo.png)
+<center><img src="/assets/blogs/coping/sa_algo.png" alt="drawing"/></center>
 
 Acceptance criterion (Metropolis condition): choose new solution s' over old solution s with probability (maximization)
 
-![Screenshot](/assets/blogs/coping/sa_formula.png)
+<center><img src="/assets/blogs/coping/sa_formula.png" alt="drawing"/></center>
 
 - Initial temperature T0
 - Annealing (cooling) schedule: how to update the

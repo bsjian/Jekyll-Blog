@@ -18,8 +18,9 @@ layout: page
 	<li>NodeJS</li>
 	<li>ReactJS</li>
 	<li>Git</li>
-	<li>Python</li>
 	<li>Java</li>
+    <li>Android Studio</li>
+	<li>C++</li>
 	<li>MySQL - MongoDB</li>
 	<li>Scrum and Kanban</li>
 </ul>

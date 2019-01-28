@@ -1,0 +1,49 @@
+---
+title: ":tea: Tea Spill - WhatsApp Clone Communication App"
+layout: post
+date: 2019-01-10 23:33
+tag: 
+    - Android Studio 
+    - Java 
+    - Kotlin 
+    - Express.js 
+    - Node.js
+    - Cloudinary
+    - 
+headerImage: true
+projects: true
+hidden: true # don't count this post in blog pagination
+description: WhatsApp Clone Android Application
+category: project
+author: boshengjian
+externalLink: false
+---
+
+---
+
+## Check It Out
+
+[Play Store](https://play.google.com/store/apps/details?id=com.boshengjian.teaspill
+)
+
+## Log In Page
+
+<center><img src="/assets/projects/teaspill/enter_phone.png" alt="drawing" width="400"/></center>
+
+## Chat 
+
+<center><img src="/assets/projects/teaspill/chat_2.png" alt="drawing" width="400"/></center>
+
+<center><img src="/assets/projects/teaspill/chat_activity.png" alt="drawing" width="400"/></center>
+
+## Edit Profile
+
+<center><img src="/assets/projects/teaspill/edit_profile.png" alt="drawing" width="400"/></center>
+
+## Take a Photo
+<center><img src="/assets/projects/teaspill/camera.png" alt="drawing" width="400"/></center>
+
+
+---
+
+
