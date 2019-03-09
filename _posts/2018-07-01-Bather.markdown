@@ -1,5 +1,5 @@
 ---
-title: ":cloud: Bather: Chrome Weather Forecast Plug-in"
+title: "Bather: Chrome Weather Forecast Plug-in"
 layout: post
 date: 2018-07-01 19:04
 tag: 

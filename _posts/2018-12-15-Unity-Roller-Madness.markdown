@@ -1,5 +1,5 @@
 ---
-title: " :video_game: Game Development - Roller Madness"
+title: "Game Development - Roller Madness"
 layout: post
 date: 2018-12-15 17:04
 tag: 

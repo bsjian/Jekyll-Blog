@@ -1,5 +1,5 @@
 ---
-title: ":camera: Full Stack Gallery Website, Cloudinary and Nodemailer"
+title: "Full Stack Gallery Website, Cloudinary and Nodemailer"
 layout: post
 date: 2018-07-28 16:23
 tag: 

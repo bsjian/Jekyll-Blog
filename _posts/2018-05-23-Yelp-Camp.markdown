@@ -1,5 +1,5 @@
 ---
-title: ":tent: Yelp Camp: A MEN Stack website"
+title: "Yelp Camp: A MEN Stack website"
 layout: post
 date: 2018-05-23 22:10
 tag: 

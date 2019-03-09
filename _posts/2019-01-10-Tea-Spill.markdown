@@ -1,5 +1,5 @@
 ---
-title: ":tea: Tea Spill - WhatsApp Clone Communication App"
+title: "Tea Spill - WhatsApp Clone Communication App"
 layout: post
 date: 2019-01-10 23:33
 tag: 

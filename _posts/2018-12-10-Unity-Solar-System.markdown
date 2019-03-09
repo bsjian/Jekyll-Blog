@@ -1,5 +1,5 @@
 ---
-title: " :video_game: Game Development - Solar System Simulation"
+title: "Game Development - Solar System Simulation"
 layout: post
 date: 2018-12-10 19:04
 tag: 

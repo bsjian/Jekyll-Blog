@@ -1,5 +1,5 @@
 ---
-title: " :video_game: Game Development - Box Shooter"
+title: "Game Development - Box Shooter"
 layout: post
 date: 2018-12-20 17:04
 tag: 
