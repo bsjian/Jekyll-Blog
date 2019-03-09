@@ -2,7 +2,7 @@
 title: About
 layout: page
 ---
-![Profile Image](/assets/images/about.jpg)
+<!-- ![Profile Image](/assets/images/about.jpg) -->
 
 <p>Hello, there!</p>
 
@@ -13,16 +13,40 @@ layout: page
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>HTML/CSS</li>
-	<li>Javascript (Design Patterns, Testes)</li>
-	<li>NodeJS</li>
-	<li>ReactJS</li>
-	<li>Git</li>
-	<li>Java</li>
-    <li>Android Studio</li>
-	<li>C++</li>
-	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
+	<li>Web Development</li>
+		<ul>
+			<li>HTML/CSS</li>
+			<li>Javascript (Design Patterns, Testes)</li>
+			<li>ReactJS</li>
+		</ul> 
+	<li>Mobile Development</li>
+		<ul>
+			<li>Android Studio</li>
+			<li>Kotlin</li>
+			<li>React Native</li>
+		</ul>
+	<li>BackEnd</li>
+		<ul>
+			<li>Node</li>
+			<li>Java</li>
+			<li>Go</li>
+			<li>Spring Boot</li>
+			<li>MySQL - MongoDB</li>
+		</ul>
+	<li>Data</li>
+		<ul>
+			<li>Apache Hadoop</li>
+			<li>Pig</li>
+			<li>Spark</li>
+			<li>Scala</li>
+		</ul>
+	<li>Platforms</li>
+		<ul>
+			<li>Git</li>
+			<li>AWS</li>
+			<li>GCP</li>
+			<li>Azzure</li>
+		</ul>
 </ul>
 
 <h2>Projects</h2>
